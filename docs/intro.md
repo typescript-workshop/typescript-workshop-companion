@@ -2,46 +2,26 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Programme
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Qui n’a jamais mis un type any, car il n’arrivait pas à typer comme
+il le souhaitait ? Certes, c'est rapide, mais vous perdez la
+sécurité apportée par TypeScript.
 
-## Getting Started
+Le système de type est très puissant et cet atelier vous permettra
+d’apprendre à maitriser le langage dans le langage ! Pour cela, nous
+allons nous inspirer de projets existants pour créer un builder de
+requêtes SQL. Grâce à un typage avancé, le compilateur TypeScript
+nous assurera une expérience développeur optimale avec
+autocomplétion et sécurité de type lors du développement. La
+sécurité apportée par le compilateur nous permet d’avoir une couche
+ultra-légère à l’exécution pour des performances optimales.
 
-Get started by **creating a new site**.
+Que vous soyez, débutant ou confirmé, vous êtes tous et toutes les
+bienvenues. À la fin de cet atelier, vous ne vous sentirez plus
+jamais démuni à la lecture d’une page de définition TypeScript.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Prérequis :
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- Connaissances de base TypeScript
+- Votre ordinateur 💻
