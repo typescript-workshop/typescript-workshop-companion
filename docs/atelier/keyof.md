@@ -2,4 +2,49 @@
 sidebar_position: 2
 ---
 
-# Key of (Johan)
+# Keyof
+
+L'operateur `keyof` permet de recuperer les clés d'un type
+
+## Utilisation courante
+
+La plupart du temps vous voudrez l'utiliser lors de la transformation d'un type avec un mapped type ou pour appliquer des contraintes sur un type generique.
+
+Grace à cette operateur vous pourrez recuperer les clés d'un objet
+
+```ts
+type Foo = {
+  bar: string;
+  bie: number;
+};
+type Keys = keyof Foo;
+//    ^? type Keys = "bar" | "bie"
+type Bar = Foo["bar"];
+//    ^? type Bar = string
+```
+
+il est aussi possible de l'utiliser sur des tableaux
+
+```ts
+type Foo = ["bar", "bie"];
+type Keys = keyof Foo;
+//    ^? type Keys = number | typeof Symbol.iterator | typeof Symbol.unscopables | "0" | "1" | "length" | "toString" | "toLocaleString" | "pop" | "push" | "concat" | "join" | "reverse" | ... 23 more ... | "at"
+type Result = Foo["length"];
+//    ^? type Result = 2
+type Result2 = Foo[number];
+//    ^? type Result2 = "bar" | "bie"
+type Result3 = Foo["0"];
+//    ^? type Result3 = "bar"
+```
+
+# Bon à savoir
+
+`keyof` peut etre utilisé sur n'importe quel type
+
+```ts
+type Foo = "barbie";
+type Keys = keyof Foo;
+//    ^? type Keys = number | typeof Symbol.iterator | "toString" | "charAt" | "charCodeAt" | "concat" | "indexOf" | "lastIndexOf" | "localeCompare" | "match" | "replace" | "search" | "slice" | ... 37 more ... | "at"
+type Result = Foo["indexOf"];
+//    ^? type Result = (searchString: string, position?: number) => number
+```

@@ -6,10 +6,11 @@ sidebar_position: 100
 
 # Utils
 
-    - [Total TypeScript](https://www.totaltypescript.com/ts-reset)
+    - [TS Reset](https://www.totaltypescript.com/ts-reset)
     - [TS-essentials](https://github.com/ts-essentials/ts-essentials)
     - [TS-Pattern](https://github.com/gvergnaud/ts-pattern)
     - [VS Code inlay hints](https://code.visualstudio.com/docs/typescript/typescript-editing#_inlay-hints)
+    - [VS Code twoslash queries](https://github.com/orta/vscode-twoslash-queries)
 
 # Exercices
 
