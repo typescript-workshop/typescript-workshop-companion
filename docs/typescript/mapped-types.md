@@ -24,7 +24,7 @@ Remarque : les mapped types ne sont d'aucune utilité sur les types primitifs pu
 
 Il arrive que nous ayons besoin de créer un type à partir d'un type existant. Par exemple si vous voulez créer un type dont toutes les propriétés seraient "required/requises" à partir d'un type de référence dont certaines de ses propriétés qui sont optionnelles, tout en conservant le lien entre les deux, comment feriez-vous ?
 
-Vous pourriez faire le choix d'écrire un nouveau type indépendant du premier, mais dans ce cas vous devrez compter sur votre vigileance pour mettre à jour les deux types, et vous perdrez en sécurité.
+Vous pourriez faire le choix d'écrire un nouveau type indépendant du premier, mais dans ce cas vous devrez compter sur votre vigilance pour mettre à jour les deux types, et vous perdrez en sécurité.
 
 Nous pourrions faire le choix de ne pas utiliser de mapped type et de l'implémenter _a la mano_ mais dans ce cas afin de conserver l'immutabilité du type passé en paramètre et du nouveau type, cela demanderait plus de code : une interface et une fonction qui serait chargée de modifier le type.
 

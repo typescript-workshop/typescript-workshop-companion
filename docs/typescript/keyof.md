@@ -10,7 +10,7 @@ L'operateur `keyof` permet de recuperer les clés d'un type
 
 La plupart du temps vous voudrez l'utiliser lors de la transformation d'un type avec un mapped type ou pour appliquer des contraintes sur un type generique.
 
-Grace à cette operateur vous pourrez recuperer les clés d'un objet
+Grace à cette opérateur vous pourrez recuperer les clés d'un objet
 
 ```ts
 type Foo = {

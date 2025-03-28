@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Le systeme de type permet d'ajouter des conditions afin de produire des types en fonctions de certaines conditions avec le mot-clé `extends`
 
-Il est important de bien assimilé la hierachie des types afin de maitriser les types conditionnels.
+Il est important de bien assimiler la hierachie des types afin de maitriser les types conditionnels.
 
 ## Types par défaut
 
