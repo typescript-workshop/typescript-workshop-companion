@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Exercice 3
+# Exercice 4
 
 Dans l'exercice précédent, nous avons vu comment sélectionner l'ensemble des tables disponibles dans notre database.
 

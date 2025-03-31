@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Exercice 2
+# Exercice 3
 
 nous vous proposons à partir du typage de notre database d'apprendre à selectionner une table
 .

@@ -11,7 +11,7 @@ Rien ne ressemble plus à un id qu'un autre id, alors faison en sorte que ce ne 
 :::tip Ressources
 
 - [Types generiques](../typescript/generic.md)
-- [Template literal](../typescript/template_literal.md)
+- [Template literal](../typescript/template-literal.md)
 
 :::
 
