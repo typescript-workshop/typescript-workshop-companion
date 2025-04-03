@@ -12,6 +12,10 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 
 :::tip Ressources
 
+- [Types generiques](../typescript/generic.md)
+- [KeyOf](../typescript/keyof.md)
+- [Operators](../typescript/operators.md)
+
 :::
 
 ## Solution
