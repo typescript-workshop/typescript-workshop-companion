@@ -28,20 +28,6 @@ Vous pourriez faire le choix d'écrire un nouveau type indépendant du premier, 
 
 Nous pourrions faire le choix de ne pas utiliser de mapped type et de l'implémenter _a la mano_ mais dans ce cas afin de conserver l'immutabilité du type passé en paramètre et du nouveau type, cela demanderait plus de code : une interface et une fonction qui serait chargée de modifier le type.
 
-### Les opérateurs, préfix et mots clés
-
-- keyof
-  Il permet d'accéder aux clés des propriétés d'un objet.
-
-- lookup type
-  La syntaxe est `T[Y]` est permet d'accéder au type des propriétés d'un objet.
-  Par exemple :
-
-```ts
-type Workshop = { name: string; schedule: number };
-type WorkshopName = Workshop["name"];
-```
-
 ### Les mapped types prêts à l'emploi disponible dans lib.d.ts
 
 Si vous parcourez la documentation de TypeScript et notamment le fichier lib.d.ts vous trouverez une série de mapped type qui sont déjà défini et que vous pouvez utiliser en fonction de votre contexte.

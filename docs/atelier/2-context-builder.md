@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Exercice 2
 
-Afin de representer nos requetes SQL nous allons créer un contexte qui sera propagé aux differentes fonctions que nous allons créer par la suite.
+Afin de représenter nos requêtes SQL, nous allons créer un contexte qui sera propagé aux differentes fonctions que nous allons créer par la suite.
 
 :::tip Ressources
 
@@ -15,8 +15,14 @@ Afin de representer nos requetes SQL nous allons créer un contexte qui sera pro
 ## Solution
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hesitez pas a nous solliciter ! </summary>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-    TODO
+    ```ts
+    export const buildContext = <DB>() => {
+      return {
+        _db: undefined as any as DB,
+      };
+    };
+    ```
 
 </details>

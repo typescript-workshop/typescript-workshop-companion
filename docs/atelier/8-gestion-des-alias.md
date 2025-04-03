@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
-# Exercice 7
+# Exercice 8
 
 :::tip Ressources
 

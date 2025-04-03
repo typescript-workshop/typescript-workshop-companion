@@ -4,9 +4,11 @@ sidebar_position: 1
 
 # Exercice 1
 
-On commence tout doucement avec un exercice basique en creant un type utilitaire pour generer des types opaques
+On commence tout doucement avec un exercice basique en créant un type utilitaire pour générer des types opaques.
 
-Rien ne ressemble plus à un id qu'un autre id, alors faison en sorte que ce ne soit pas de simple `string` et laissons Typescript nous aider à toujours fournir la bonne donné au bon endroit 💪
+Rien ne ressemble plus à un id qu'un autre id, alors faisons en sorte que ce ne soit pas de simple `string` et laissons Typescript nous aider à toujours fournir la bonne donnée au bon endroit 💪
+
+Autre avantage, à la lecture cela nous permettra de faire le lien entre le métier et le code plus facilement. 
 
 :::tip Ressources
 
@@ -18,7 +20,7 @@ Rien ne ressemble plus à un id qu'un autre id, alors faison en sorte que ce ne 
 ## Solution
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hesitez pas a nous solliciter ! </summary>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
     ```ts
     export type UUID<T extends string> = Opaque<string, `${T}_uuid`>;
