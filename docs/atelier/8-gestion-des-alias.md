@@ -4,6 +4,10 @@ sidebar_position: 8
 
 # Exercice 8
 
+Rendez-vous dans le fichier 8-gestion-des-alias.spec-d.ts et db.ts pour l'implémentation.
+
+À vous de jouer !
+
 :::tip Ressources
 
 :::

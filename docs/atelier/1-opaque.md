@@ -8,7 +8,7 @@ On commence tout doucement avec un exercice basique en créant un type utilitair
 
 Rien ne ressemble plus à un id qu'un autre id, alors faisons en sorte que ce ne soit pas de simple `string` et laissons Typescript nous aider à toujours fournir la bonne donnée au bon endroit 💪
 
-Autre avantage, à la lecture cela nous permettra de faire le lien entre le métier et le code plus facilement. 
+Autre avantage, à la lecture cela nous permettra de faire le lien entre le métier et le code plus facilement.
 
 :::tip Ressources
 
