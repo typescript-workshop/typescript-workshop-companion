@@ -4,10 +4,19 @@ sidebar_position: 1
 
 # Hiérarchies des types
 
-## Types statiques
+On peut se représenter le typage comme un arbre, plus on descend dans cet arbre, plus le type sera spécifique.
 
-https://type-level-typescript.com/_next/static/media/any-set.5949397f.svg
-https://type-level-typescript.com/_next/static/media/unknown-set.8abdc1f0.svg
+Tout en haut, nous avons :
+- `any` qui représente n'importe quel type et qui désactive toute aide que le compilateur pourrait vous apporter
+- `unknowm` qui représente n'importe quel type et qui vous forcera à verifier son type avant de l'utiliser
 
-https://www.zhenghao.io/art/blog/type-hierarchy-tree/top.png
-https://www.zhenghao.io/art/blog/type-hierarchy-tree/supertype-subtype2.png
+L'étage du dessous représente les types primitifs du langage et l'object vide.
+
+Dans le cas de l'objet, plus vous allez lui ajouter d'attributs, plus il sera spécifique.
+
+En bas, on retrouve les constantes qui sont les versions ultra spécifiques des primitives et des objets.
+
+Tout en bas, on a le type `never` qui est utilisé pour matérialiser un type impossible. 
+Souvent utilisé dans la branche par défaut d'un switch sur lequel vous voulez être exhaustif, et dans les cas impossibles lors de transformations de types.
+
+![Hierarchie des types](img/ts_types_hierarchy.png)
