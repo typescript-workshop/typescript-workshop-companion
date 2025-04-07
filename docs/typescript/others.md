@@ -6,6 +6,7 @@ sidebar_position: 100
 
 # Utils
 
+    - [Testing types with vitest](https://vitest.dev/guide/testing-types.html#testing-types)
     - [TS Reset](https://www.totaltypescript.com/ts-reset)
     - [TS-essentials](https://github.com/ts-essentials/ts-essentials)
     - [TS-Pattern](https://github.com/gvergnaud/ts-pattern)
