@@ -10,7 +10,7 @@ L'autocomplétion facilite grandement notre quotidien de développeur. C'est la 
 
 Chaque amélioration compte. Vous pouvez refondre complétement le fichier db.ts ou wrapper les fonctions existantes. À vous de jouer !
 
-:::Idées d'évolutions
+:::tip Idées d'évolutions
 
 - Utiliser une ou des classes
 - Se voir proposer `selectFields` après un `selectFrom`
