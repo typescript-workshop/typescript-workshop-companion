@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 Rajouter un exemple avec des pommes
-Expliciter le
+Expliciter le concept du type opaque et donner un exemple.
 Enlever le symbol le mettre peut être plutôt en pour aller plus loin.
 
 # Exercice 1
