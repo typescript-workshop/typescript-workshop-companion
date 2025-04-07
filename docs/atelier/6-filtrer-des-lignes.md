@@ -15,7 +15,7 @@ Rendez-vous dans le fichier 6-filtrer-des-lignes.spec-d.ts et db.ts pour l'impl�
 
 :::tip Ressources
 
-- [Types generiques](../typescript/generic.md)
+- [Types génériques](../typescript/generic.md)
 - [KeyOf](../typescript/keyof.md)
 - [Operators](../typescript/operators.md)
 

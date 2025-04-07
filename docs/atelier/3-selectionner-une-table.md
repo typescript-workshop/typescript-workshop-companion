@@ -12,8 +12,8 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
 
 :::tip Ressources
 
-- [Types generiques](../typescript/generic.md)
-- [Template literal](../typescript/template-literal.md)
+- [Types génériques](../typescript/generic.md)
+- [KeyOf](../typescript/keyof.md)
 
 :::
 

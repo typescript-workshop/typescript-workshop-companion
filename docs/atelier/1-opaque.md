@@ -12,7 +12,7 @@ Autre avantage, à la lecture cela nous permettra de faire le lien entre le mét
 
 :::tip Ressources
 
-- [Types generiques](../typescript/generic.md)
+- [Types génériques](../typescript/generic.md)
 - [Template literal](../typescript/template-literal.md)
 
 :::
