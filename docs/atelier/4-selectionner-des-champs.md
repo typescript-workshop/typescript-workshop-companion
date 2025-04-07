@@ -14,7 +14,7 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 
 - [Types génériques](../typescript/generic.md)
 - [Types conditionnels](../typescript/conditional-types.md)
-- [KeyOf](../typescript/keyof.md)
+- [KeyOf & lookup](../typescript/keyof-lookup.md)
 
 :::
 

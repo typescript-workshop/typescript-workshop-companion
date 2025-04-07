@@ -65,7 +65,7 @@ type StringIndexed = { [n: string]: unknown };
 type StringIndexedKeys = keyof StringIndexed; // string | number
 ```
 
-### Lookup type
+# Lookup type
 
 La syntaxe est `T[Y]`, où `Y` est une clé de `T` permet d'accéder au type des propriétés d'un objet.
 Par exemple :

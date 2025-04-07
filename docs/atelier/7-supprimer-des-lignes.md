@@ -11,7 +11,7 @@ Rendez-vous dans le fichier 7-supprimer-des-lignes.spec-d.ts et db.ts pour l'imp
 :::tip Ressources
 
 - [Types génériques](../typescript/generic.md)
-- [KeyOf](../typescript/keyof.md)
+- [KeyOf & lookup](../typescript/keyof-lookup.md)
 - [Hiérarchie des types](../typescript/type-hierarchy.md)
 - [Types conditionnels](../typescript/conditional-types.md)
 

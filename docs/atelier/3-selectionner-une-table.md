@@ -14,9 +14,10 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
 
 - [Types génériques](../typescript/generic.md)
 - [Types conditionnels](../typescript/conditional-types.md)
-- [KeyOf](../typescript/keyof.md)
+- [KeyOf & lookup](../typescript/keyof-lookup.md)
 - [Hiérarchie des types](../typescript/type-hierarchy.md)
-  :::
+
+:::
 
 ## Solution
 

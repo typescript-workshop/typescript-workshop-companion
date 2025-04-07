@@ -16,7 +16,8 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 
 - [Types génériques](../typescript/generic.md)
 - [Hiérarchie des types](../typescript/type-hierarchy.md)
-  :::
+
+:::
 
 ## Solution
 
