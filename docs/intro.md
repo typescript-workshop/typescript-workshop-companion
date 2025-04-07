@@ -26,6 +26,11 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 - Connaissances de base TypeScript
 - Votre ordinateur 💻
 
+## Exemple de cas réel
+
+Code / Schema / petite vidéo
+-> à reprendre dans chaque étape.
+
 ## Rejoindre TypeScript Workshop Companion
 
 [https://bit.ly/devoxx-ts](https://typescript-workshop.github.io/typescript-workshop-companion/)

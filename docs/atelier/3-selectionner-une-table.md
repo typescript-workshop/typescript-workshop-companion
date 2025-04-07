@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Exercice 3
 
+Niveau de difficulté : ⭐️⭐️⭐️
+
 Ça y est, nous avons créé un contexte qui contient notre database 🎉.
 
 Maintenant, nous vous proposons à partir du typage de notre database d'apprendre à sélectionner spécifiquement une table de celle-ci. Pour cela il nous faudra jongler entre les typages de notre database, des tables et de la méthode selectFrom.

@@ -2,7 +2,11 @@
 sidebar_position: 2
 ---
 
+C'est pas clair du tout il faudrait le raccrocher à un cas plus concret.
+
 # Exercice 2
+
+Niveau de difficulté : ⭐️⭐️
 
 Que serait une requête SQL sans database associée et comment les représenter en TypeScript?
 
@@ -18,6 +22,15 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 - [Hiérarchie des types](../typescript/type-hierarchy.md)
 
 :::
+
+## Indice
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+
+Parfois les alias ou any peuvent s'avérer bien utilent.
+
+</details>
 
 ## Solution
 

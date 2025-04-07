@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Exercice 4
 
-Nous vous proposons de typer la fonction `selectFields` qui, à partir du typage de notre database, sera capable d'inférer les noms des champs qu'il est possible de sélectionner au sein d'une table.
+Nous vous proposons de typer la fonction `selectFields` qui, à partir du typage de notre database, sera capable d'inférer les noms des champs qu'il est possible de selectionner au sein d'une table.
 
 Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'implémentation.
 
