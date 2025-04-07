@@ -14,6 +14,10 @@ Rendez-vous dans le fichier 5-selectionner-tous-les-champs.spec-d.ts et db.ts po
 
 :::tip Ressources
 
+- [Types génériques](../typescript/generic.md)
+- [Types conditionnels](../typescript/conditional-types.md)
+- [Hiérarchie des types](../typescript/type-hierarchy.md)
+
 :::
 
 ## Solution

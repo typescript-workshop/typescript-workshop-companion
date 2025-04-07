@@ -13,6 +13,7 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 :::tip Ressources
 
 - [Types génériques](../typescript/generic.md)
+- [Types conditionnels](../typescript/conditional-types.md)
 - [KeyOf](../typescript/keyof.md)
 
 :::

@@ -17,4 +17,6 @@ Chaque amélioration compte. Vous pouvez refondre complétement le fichier db.ts
 - Ne pas pouvoir accéder au `selectFields` après un `selectAll`
 - Ne pas pouvoir accéder au `selectFields` après un `deleteFrom`
 
+![Dx flow](img/dx_flow.png)
+
 :::

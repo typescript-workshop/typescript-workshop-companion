@@ -10,6 +10,11 @@ Rendez-vous dans le fichier 8-gestion-des-alias.spec-d.ts et db.ts pour l'implé
 
 :::tip Ressources
 
+- [Types génériques](../typescript/generic.md)
+- [KeyOf](../typescript/keyof.md)
+- [Hiérarchie des types](../typescript/type-hierarchy.md)
+- [Types conditionnels](../typescript/conditional-types.md)
+
 :::
 
 ## Solution
