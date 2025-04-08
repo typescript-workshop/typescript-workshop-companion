@@ -26,10 +26,9 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 - Connaissances de base TypeScript
 - Votre ordinateur 💻
 
-## Exemple de cas réel
+## Objectif final
 
-Code / Schema / petite vidéo
--> à reprendre dans chaque étape.
+![Démo api final avec autocomplétion](./img/final_dx.gif)
 
 ## Rejoindre TypeScript Workshop Companion
 
