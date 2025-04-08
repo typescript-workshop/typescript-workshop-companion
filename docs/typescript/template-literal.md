@@ -7,7 +7,7 @@ sidebar_position: 7
 
 ## Literal types
 
-Les _types littéraux_ permettent de restreinte un type à une valeur spécifique. Par exemple :
+Les _types littéraux_ permettent de restreindre un type à une valeur spécifique. Par exemple :
 
 ```ts
 type French = 'french'
