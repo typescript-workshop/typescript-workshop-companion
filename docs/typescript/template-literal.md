@@ -2,13 +2,18 @@
 sidebar_position: 7
 ---
 
-# Template Literal
+# Template Literals
+
+
+## Literal types
 
 Les _types littéraux_ permettent de restreinte un type à une valeur spécifique. Par exemple :
 
 ```ts
 type French = 'french'
 ```
+
+## Templates
 
 Il est également possible de définir des _gabarits_ de types littéraux
 
@@ -26,7 +31,20 @@ Quand une union est employée dans une section interpolée, le type résultant e
 type English = 'english'
 type French = 'french'
 
-type CurrentLanguageInfo = `You are browsing our site's ${French | Englifh} version`
+type CurrentLanguageInfo = `You are browsing our site's ${French | English} version`
 // type CurrentLanguageInfo = "You are browsing our site's french version" | "You are browsing our site's french version"
+
+```
+
+## Inference
+
+Il est possible d'inférer un type à partir d'un gabarit par substitution.
+
+```ts
+type FrenchSpeakingCountryCode<Locale> = Locale extends `fr_${infer Country}` ? Country : never;
+
+type FranceCountryCode = FrenchSpeakingCountryCode<"fr_FR">; // "FR"
+type CanadaCountryCode = FrenchSpeakingCountryCode<"fr_CA">; // "CA"
+type BelgiumCountryCode = FrenchSpeakingCountryCode<"fr_BE">; // "BE"
 
 ```
