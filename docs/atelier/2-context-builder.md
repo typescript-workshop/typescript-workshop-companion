@@ -37,7 +37,7 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-Parfois les alias ou any peuvent s'avérer bien utilent.
+Parfois les alias ou any peuvent s'avérer bien utiles.
 
 </details>
 

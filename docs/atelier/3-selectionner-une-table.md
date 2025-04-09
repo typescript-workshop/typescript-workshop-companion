@@ -21,6 +21,50 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
 
 :::
 
+## Indice 1
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  
+  Si l'on souhaite bénéficier d'autocomplétion en invoquant `selectFrom` on peut inférer les noms des tables disponibles à partir du type de notre `Database` courante. Et la valeur adossée à la clé `_db` du _contexte_ est justement de type `Database`.
+
+  ```ts
+  type Database = {
+  users: UserTable;
+  companies: CompanyTable;
+  };
+  const context = buildContext<Database>();
+  type Context = typeof context;
+  // Context = { _db: Database }
+  ```
+
+  On peut accéder au type de `_db` au moyen d'un _lookup type_ via le type de notre _contexte_. 
+
+</details>
+
+## Indice 2
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+
+  Ce qu'on peut imaginer serait d'extraire les noms des tables telles qu'elles existent dans la clé `_db` de notre _contexte_.
+  
+  Typiquement ici, les noms des tables auxquelles nous pourrions vouloir accéder sont les clés de l'objet en valeur de la clé `_db`. Pour extraire les clé d'un objet on dispose de l'opérateur `keyof`.
+
+  Par exemple: 
+
+  ```ts
+  type ShopDatabase = {
+    items: ItemTable,
+    baskets: BasketTable
+  }
+
+  type TableNames = keyof ShopDatabase // "items" | "baskets"
+
+  ```
+
+</details>
+
 ## Solution
 
 <details>
