@@ -28,8 +28,13 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-ça se passe par ici
+  Pour commencer on voit dans le test qu'on s'attend à ce que l'implémentation de `buildContext` prenne un type en paramètre, un peu comme dans l'exemple ci-après : 
 
+  ```ts
+  const buildSomething = <T>() => {
+    // return something
+  }
+  ```
 </details>
 
 ## Indice 2
@@ -37,7 +42,25 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-Parfois les alias ou any peuvent s'avérer bien utiles.
+  Dans le cas présent nous avons des informations que Typescript n'a pas. Nous pouvons envisager de faire une _assertion de type_ pour lui apporter plus de précision.
+
+  ```ts
+  const nameInput = document.getElementById("name") as HTMLInputElement;
+  // Nous savons que l'élément avec l'id 'name' est un input HTML mais Typescript ne pouvant le deviner on peut le spécifier
+
+  ```
+
+  Parfois le mot clé `as`, en conjonction avec `any` peut s'avérer bien utile !
+
+  Et dans notre cas :
+
+  ```ts
+  const buildContext = () => {
+  return {
+    _db: undefined, // <= ça se passe ici
+  };
+};
+  ```
 
 </details>
 
