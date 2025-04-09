@@ -32,7 +32,7 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 
   ```ts
   const buildSomething = <T>() => {
-    // return something
+    // return said something that is somewhat based on `T`
   }
   ```
 </details>
@@ -42,25 +42,32 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-  Dans le cas présent nous avons des informations que Typescript n'a pas. Nous pouvons envisager de faire une _assertion de type_ pour lui apporter plus de précision.
+  Dans le cas présent nous avons des informations que Typescript n'a pas _à priori_ (le type de notre base de données). Nous pouvons lui apporter plus de précision au lieu de laisser le compilateur tenter d'en inférer le type.
+  
+  On parle alors de _type assertion_ ou de _type casting_. 
+  
+  Il existe deux syntaxes pour cela, `<>` et le mot-clé `as`. Par exemple, ci-dessous, Typescript pourrait difficilement connaitre le type d'un élément qu'on extrait du DOM. 
 
   ```ts
+  // Nous savons que l'élément avec l'id 'name' est un input HTML mais Typescript ne pouvant le deviner on peut le lui spécifier
   const nameInput = document.getElementById("name") as HTMLInputElement;
-  // Nous savons que l'élément avec l'id 'name' est un input HTML mais Typescript ne pouvant le deviner on peut le spécifier
-
+  // ou sinon
+  const nameInput = <HTMLInputElement>document.getElementById("name");
   ```
-
-  Parfois le mot clé `as`, en conjonction avec `any` peut s'avérer bien utile !
 
   Et dans notre cas :
 
   ```ts
   const buildContext = () => {
-  return {
-    _db: undefined, // <= ça se passe ici
+    return {
+      _db: undefined, // <= ça pourrait se passer ici...
+    };
   };
-};
   ```
+
+  Parfois le mot clé `as` (en conjonction avec `any`) peut s'avérer bien utile !.
+  On peut se douter que _caster_ `undefined` directement vers le type de notre base de données 
+
 
 </details>
 
