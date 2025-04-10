@@ -20,6 +20,15 @@ Rendez-vous dans le fichier 5-selectionner-tous-les-champs.spec-d.ts et db.ts po
 
 :::
 
+## Indice 1
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  
+  On peut réemployer ici le contexte de **sélection** sur une **table** _donnée_. Par contre `selectAll` n'enrichira pas la clé `_fields` du contexte avec un tableau de noms de champs mais avec le mot-clé `ALL`. Dans ce cas il faut dire au compilateur d'inférer le type le plus précis possible à partir de cette expression (i.e. le type littéral `ALL`). 
+
+</details>
+
 ## Solution
 
 <details>

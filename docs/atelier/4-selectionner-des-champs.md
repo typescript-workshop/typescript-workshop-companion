@@ -43,7 +43,7 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
   
-  Il est tout à fait possible de définir un _lookup type_ à partir d'un autre _lookup type_. Notamment ici nous cherchons à identifier les clés membres d'une table, elle-même membre d'une base de donnée afin de spécifier que le second paramètre de `selectFields` sera un tableau dont les éléments seront du type des dites clés.
+  Il est tout à fait possible de définir un _lookup type_ à partir d'un autre _lookup type_. Notamment ici nous cherchons à identifier les clés membres d'une table, elle-même membre d'une base de donnée, et ceci afin de spécifier que le second paramètre de `selectFields` est un tableau dont les éléments sont du type des dites clés.
 
 </details>
 
