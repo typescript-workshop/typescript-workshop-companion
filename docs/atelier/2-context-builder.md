@@ -66,7 +66,7 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
   ```
 
 
-  On peut se douter que _caster_ `undefined` directement vers le type de notre base de données est un peu abrupte, parfois le mot clé `as`, en conjonction avec `any`, peut s'avérer bien utile !
+  On peut se douter que _caster_ `undefined` directement vers le type générique `DB` est un peu abrupt (parfois le mot clé `as`, en conjonction avec `any`, peut s'avérer bien utile) !
 
 </details>
 

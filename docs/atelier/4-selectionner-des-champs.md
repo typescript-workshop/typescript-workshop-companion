@@ -23,7 +23,9 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
   
-  On est dans le même genre de cas qu'à l'étape précédente, simplement cette fois-ci on veut pouvoir inférer le types de propriétés nichées un peu plus profondément que les noms des tables. 
+  On est dans le même genre de cas qu'à l'étape précédente, simplement cette fois-ci on veut pouvoir inférer le types de propriétés nichées un peu plus profondément que les noms des tables.
+
+  Suite à l'invocation de `selectFrom` on dispose, dans notre _contexte_ d'un peu plus d'information : on sait que nous construisons une operation `select` et surtout quelle table nous allons interroger. Fort de cette information il est possible d'extraire depuis le _contexte_ les noms de champs de la table ciblée.
 
 </details>
 
