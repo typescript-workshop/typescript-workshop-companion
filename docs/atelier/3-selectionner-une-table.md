@@ -82,7 +82,7 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
 
   Mais nous ne connaissons pas à l'avance le type des bases de données qui seraient _in fine_ consommées par `selectFrom`.
   
-  C'est un peu contraignant pour définir la signature de notre fonction de savoir qu'elle devra prendre en charge _n'importe quel_ (any ?) type de base deonnée...
+  C'est un peu contraignant pour définir la signature de notre fonction de savoir qu'elle devra prendre en charge _n'importe quel_ (any ?) type de base donnée...
 
 
 </details>
