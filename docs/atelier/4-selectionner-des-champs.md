@@ -18,6 +18,15 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 
 :::
 
+## Indice 1
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  
+  On est dans le même genre de cas qu'à l'étape précédente, simplement cette fois-ci on veut pouvoir inférer le types de propriétés nichées un peu plus profondément que les noms des tables. 
+
+</details>
+
 ## Solution
 
 <details>
