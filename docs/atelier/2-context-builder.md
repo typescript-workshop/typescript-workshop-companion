@@ -44,7 +44,7 @@ Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implém
 
   Dans le cas présent nous avons des informations que Typescript n'a pas _à priori_ (le type de notre base de données). Nous pouvons lui apporter plus de précision au lieu de laisser le compilateur tenter d'en inférer le type.
   
-  On parle alors de _type assertion_ ou de _type casting_. 
+  On parle alors de _type assertion_ ou bien de _type casting_ voire, en français d'_affirmation de type_. 
   
   Il existe deux syntaxes pour cela, `<>` et le mot-clé `as`. Par exemple, ci-dessous, Typescript pourrait difficilement connaitre le type d'un élément qu'on extrait du DOM. 
 

@@ -60,9 +60,30 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
     carts: CartTable
   }
 
-  type TableNames = keyof ShopDatabase // "items" | "baskets"
-
+  type TableNames = keyof ShopDatabase // "products" | "carts"
   ```
+
+</details>
+
+## Indice 3
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+
+  On voit que `selectFrom` prend en premier paramètre un contexte initialisé avec le type d'une base de donnée. Il pourrait être utile que la signature de `selectFrom` prenne cela en compte.
+
+  De part l'attendu de l'exercice précédent le type de retour de `buildContext<DB>()` nous est connu : 
+
+  ```ts
+  type EmptyContext<DB> = {
+    _db: DB;
+  };
+  ```
+
+  Mais nous ne connaissons pas à l'avance le type des bases de données qui seraient _in fine_ consommées par `selectFrom`.
+  
+  C'est un peu contraignant pour définir la signature de notre fonction de savoir qu'elle devra prendre en charge _n'importe quel_ (any ?) type de base deonnée...
+
 
 </details>
 
