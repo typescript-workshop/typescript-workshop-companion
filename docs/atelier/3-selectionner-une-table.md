@@ -33,6 +33,7 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
   users: UserTable;
   companies: CompanyTable;
   };
+
   const context = buildContext<Database>();
   type Context = typeof context;
   // Context = { _db: Database }
@@ -55,8 +56,8 @@ Rendez-vous dans le fichier 3-selectionner-une-table.spec.dt.ts et db.ts pour l'
 
   ```ts
   type ShopDatabase = {
-    items: ItemTable,
-    baskets: BasketTable
+    products: ProductTable,
+    carts: CartTable
   }
 
   type TableNames = keyof ShopDatabase // "items" | "baskets"
