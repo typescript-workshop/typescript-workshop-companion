@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Exercice 7
 
-Rendez-vous dans le fichier 7-supprimer-des-lignes.spec-d.ts et db.ts pour l'implémentation.
+Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

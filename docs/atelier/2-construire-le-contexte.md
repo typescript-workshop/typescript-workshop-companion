@@ -2,19 +2,19 @@
 sidebar_position: 2
 ---
 
-C'est pas clair du tout il faudrait le raccrocher à un cas plus concret.
-
 # Exercice 2
 
-Niveau de difficulté : ⭐️⭐️
+:::note TODO
+C'est pas clair du tout il faudrait le raccrocher à un cas plus concret.
+:::
 
-$db type qui n'a pas vocation a être utilisée au runtime.
+`$db` type qui n'a pas vocation a être utilisée au runtime.
 
 Que serait une requête SQL sans database associée et comment les représenter en TypeScript?
 
 Nous allons créer un contexte qui sera propagé aux differentes fonctions que nous allons créer par la suite. Au fur et à mesure des exercices nous aurons besoin de l'enrichir mais pour le moment notre database suffit.
 
-Rendez-vous dans le fichier 2-context-builder.spec.dt.ts et db.ts pour l'implémentation.
+Rendez-vous dans le `fichier 2-context-builder.spec.dt.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 
