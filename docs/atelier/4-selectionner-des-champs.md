@@ -47,6 +47,15 @@ Rendez-vous dans le fichier 4-selectionner-des-champs.spec-d.ts et db.ts pour l'
 
 </details>
 
+## Indice 4
+
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  
+  Vous avez peut-être une erreur Typescript dûe à un manque de précision sur le type de l'opération telle qu'elle est retournée par `selectFrom` (cf. l'exercice précédent). Dans ce cas il est utile de préciser au compilateur qu'il doit inférer le type le plus précis à partir de la valeur retournée.
+
+</details>
+
 ## Solution
 
 <details>
