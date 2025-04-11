@@ -10,7 +10,9 @@ Tout en haut, nous avons :
 - `any` qui représente n'importe quel type et qui désactive toute aide que le compilateur pourrait vous apporter
 - `unknowm` qui représente n'importe quel type et qui vous forcera à verifier son type avant de l'utiliser
 
-L'étage du dessous représente les types primitifs du langage et l'object vide.
+L'étage du dessous représente l'object vide dont tous les types primitifs sont des descendants.
+
+En dessous on retrouve donc tous les types primitifs.
 
 Dans le cas de l'objet, plus vous allez lui ajouter d'attributs, plus il sera spécifique.
 
