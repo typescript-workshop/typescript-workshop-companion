@@ -15,7 +15,6 @@ Rendez-vous dans le fichier 6-filtrer-des-lignes.spec-d.ts et db.ts pour l'impl�
 
 :::tip Ressources
 
-- [Types génériques](../typescript/generic.md)
 - [KeyOf & lookup](../typescript/keyof-lookup.md)
 - [Types conditionnels](../typescript/conditional-types.md)
 
@@ -24,8 +23,25 @@ Rendez-vous dans le fichier 6-filtrer-des-lignes.spec-d.ts et db.ts pour l'impl�
 ## Indice 1
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
-  
 
+  La signature de `where` dépend d'un type de contexte (en l'occurence de _sélection_ dans une _table_ d'une base de donnée arbitraire) et d'un type de champ (qui dépend de la table ciblée)
+  
+</details>
+
+## Indice 2
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+
+  Pour le moment nous n'implémentons qu'une clause d'égalité, un type littéral devrait faire l'affaire pour l'argument `operator` !
+  
+</details>
+
+## Indice 3
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+
+  Au final on va utiliser ici beaucoup de choses qu'on a déjà pu aborder: _lookup types_, mots-clé _keyof_ ou _extends_. 
+  
 </details>
 
 ## Solution
