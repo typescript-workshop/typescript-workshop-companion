@@ -18,8 +18,13 @@ sidebar_position: 100
     - [Type-level TypeScript](https://type-level-typescript.com/)
     - [Advent of TypeScript](https://www.adventofts.com/)
 
-# Articles
+# Articles et livre
 
     - [A different way to think about typescript](https://www.rob.directory/blog/a-different-way-to-think-about-typescript)
     - [The type hierarchy tree](https://www.zhenghao.io/posts/type-hierarchy-tree)
     - [Developing type-level algorithms in TypeScript](https://softwaremill.com/developing-type-level-algorithms-in-typescript/)
+    - TypeScript - Notions fondamentales (2e édition), Felix Billon et Sylvain Pontoreau
+
+# Extension VS code
+
+- [Pretty TS errors](https://marketplace.visualstudio.com/items/?itemName=yoavbls.pretty-ts-errors)
