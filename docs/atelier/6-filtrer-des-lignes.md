@@ -21,6 +21,13 @@ Rendez-vous dans le fichier 6-filtrer-des-lignes.spec-d.ts et db.ts pour l'impl�
 
 :::
 
+## Indice 1
+<details>
+  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  
+
+</details>
+
 ## Solution
 
 <details>
