@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+Expliquer le select ALL
+
 # Exercice 5
 
 Qui n'a jamais eu besoin de sélectionner tous les champs d'une table ?

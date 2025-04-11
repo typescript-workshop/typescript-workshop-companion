@@ -33,3 +33,8 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 ## Rejoindre TypeScript Workshop Companion
 
 [https://bit.ly/devoxx-ts](https://typescript-workshop.github.io/typescript-workshop-companion/)
+
+:::info Setup
+
+Une fois le repository cloné, n'oubliez pas de lancer la commande `npm install` ou `yarn install`
+:::
