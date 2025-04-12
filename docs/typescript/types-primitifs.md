@@ -16,7 +16,7 @@ TypeScript comprend plusieurs types primitifs :
 
 Comment utiliser ces types ? Lorsque que vous souhaitez typer une variable const ou let, il vous suffit de préciser son type en suivant la syntaxe ci-dessous :
 
-`const workshop : mon type = ...`
+`const workshop : Mon Type = ...`
 
 :::info L'inférence de type, quand le compilateur le déduit de lui-même.
 
