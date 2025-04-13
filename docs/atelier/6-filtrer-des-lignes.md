@@ -22,15 +22,15 @@ Rendez-vous dans le fichier `6-filtrer-des-lignes.spec-d.ts` et `db.ts` pour l'i
 
 ## Indice 1
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Tout est là</summary>
 
-  La signature de `where` dépend d'un type de contexte (en l'occurence de _sélection_ dans une _table_ d'une base de donnée arbitraire) et d'un type de champ (qui dépend de la table ciblée)
+  La signature de `where` dépend du type du contexte (en l'occurence de _sélection_ dans une _table_ d'une base de donnée arbitraire) ainsi que du nom et du type de champ (qu'on peut déduire de la _table_) sur lequel le filtre sera appliqué.
   
 </details>
 
 ## Indice 2
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Faisons simple</summary>
 
   Pour le moment nous n'implémentons qu'une clause d'égalité, un type littéral devrait faire l'affaire pour l'argument `operator` !
   
@@ -38,7 +38,7 @@ Rendez-vous dans le fichier `6-filtrer-des-lignes.spec-d.ts` et `db.ts` pour l'i
 
 ## Indice 3
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Panachage</summary>
 
   Au final on va utiliser ici beaucoup de choses qu'on a déjà pu aborder: _lookup types_, mots-clé _keyof_ ou _extends_. 
   

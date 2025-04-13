@@ -19,7 +19,7 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
 
 ## Indice 1
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Choix de l'opération</summary>
 
   On peut s'attendre à ce que `deleteFrom` opére dans un contexte similaire à `selectFrom`. D'ailleurs la seule différence est que cette fonction viendra enrichir le contexte qui lui est fourni avec un _autre type d'opération_. 
   
@@ -27,9 +27,9 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
 
 ## Indice 2
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Jusqu'**où** cela nous mène</summary>
 
-  On avait typé la fonction `where` pour qu'elle opère à partir d'un _contexte_ de **sélection**. Il faut à présent prendre en compte qu'elle puisse opérer dans un contexte de **suppression** 
+  On avait typé la fonction `where` pour qu'elle opère à partir d'un _contexte_ de **sélection**. Il faut à présent prendre en compte qu'elle peut également opérer dans un contexte de **suppression** 
   
 </details>
 
@@ -57,7 +57,7 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
     });
     ```
 
-    Il faudra aussi modifier le typage de la fonction `where` pour aussi accepter le `Deletablecontext`
+    Il faudra aussi modifier la signature de `where` pour qu'elle accepte également un `DeletableContext`.
 
     ```ts
     type AnyQueryableContext = SelectableContext<any> | DeletableContext<any>;

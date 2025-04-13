@@ -14,7 +14,7 @@ Que serait une requête SQL sans database associée et comment les représenter 
 
 Nous allons créer un contexte qui sera propagé aux differentes fonctions que nous allons créer par la suite. Au fur et à mesure des exercices nous aurons besoin de l'enrichir mais pour le moment notre database suffit.
 
-Rendez-vous dans le `fichier 2-context-builder.spec.dt.ts` et `db.ts` pour l'implémentation.
+Rendez-vous dans le fichier `2-context-builder.spec.dt.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 
@@ -28,13 +28,13 @@ Rendez-vous dans le `fichier 2-context-builder.spec.dt.ts` et `db.ts` pour l'imp
 ## Indice 1
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Un type générique</summary>
 
 Pour commencer on voit dans le test qu'on s'attend à ce que l'implémentation de `buildContext` prenne un type en paramètre, un peu comme dans l'exemple ci-après :
 
 ```ts
 const buildSomething = <T>() => {
-  // return said something that is somewhat based on `T`
+  // et on construira quelque chose qui dépend de `T`
 };
 ```
 
@@ -43,7 +43,7 @@ const buildSomething = <T>() => {
 ## Indice 2
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>C'est Typescript qui a aprfois besoin d'un coup de pouce</summary>
 
 Dans le cas présent nous avons des informations que Typescript n'a pas _à priori_ (le type de notre base de données). Nous pouvons lui apporter plus de précision au lieu de laisser le compilateur tenter d'en inférer le type.
 

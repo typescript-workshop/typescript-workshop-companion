@@ -21,7 +21,7 @@ Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pou
 ## Indice 1
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Préciser le contexte</summary>
   
   Comme précédemment on peut envisager de construire un type intermédiaire pour préciser la signature du _contexte_ passé `selectFields`. À ce stade `selectFields` devra pouvoir être invoqué avecle contexte d'une opération de sélection sur une table membre d'une base de donnée... _donnée_ (**any** ?).
 
@@ -30,9 +30,9 @@ Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pou
 ## Indice 2
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Le champ des champs possibles</summary>
   
-  Nous sommes dans un cas sililaire à l'exercice précédent, simplement cette fois-ci on veut pouvoir inférer le types de propriétés nichées un peu plus profondément que les noms des tables.
+  Nous sommes dans un cas similaire à l'exercice précédent, simplement cette fois-ci on veut pouvoir inférer le types de propriétés nichées un peu plus profondément que les noms des tables.
 
   Suite à l'invocation de `selectFrom` on dispose, dans notre _contexte_ d'un peu plus d'information : on sait que nous construisons une operation `select` et surtout quelle table nous allons interroger. Il est alors possible d'extraire, depuis le _contexte_, les ~~types des clés~~ _noms de champs_ de la table ciblée et ainsi faire en sorte que `selectFields` n'accepte en second paramètre qu'un tableau dont les éléments sont des membres de champs de la table cible.
 
@@ -41,7 +41,7 @@ Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pou
 ## Indice 3
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>La clé des champs</summary>
   
   Il est tout à fait possible de définir un _lookup type_ à partir d'un autre _lookup type_. Notamment ici nous cherchons à identifier les clés membres d'une table, elle-même membre d'une base de donnée, et ceci afin de spécifier que le second paramètre de `selectFields` est un tableau dont les éléments sont du type des dites clés.
 
@@ -50,7 +50,7 @@ Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pou
 ## Indice 4
 
 <details>
-  <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
+  <summary>Oups !</summary>
   
   Vous avez peut-être une erreur Typescript dûe à un manque de précision sur le type de l'opération telle qu'elle est retournée par `selectFrom` (cf. l'exercice précédent). Dans ce cas il est utile de préciser au compilateur qu'il doit inférer le type le plus précis à partir de la valeur retournée par `selectFrom`.
 
