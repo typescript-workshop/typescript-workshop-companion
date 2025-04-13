@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Conditional type
+# Types conditionnels
 
 Le systeme de type permet d'ajouter des conditions afin de produire des types en fonctions de certaines conditions avec le mot-clé `extends`
 
@@ -22,7 +22,7 @@ Vous trouverez la liste exhaustive des utilitaires inclus avec Typescript
 https://www.typescriptlang.org/docs/handbook/utility-types.html
 :::
 
-### Match or Equal
+### Match ou Equal
 
 Grace au typage conditionnel nous pouvons par exemple créer des types utilitaires pour des tests
 

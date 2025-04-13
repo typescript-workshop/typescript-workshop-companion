@@ -49,9 +49,16 @@ Rendez-vous dans le fichier `6-filtrer-des-lignes.spec-d.ts` et `db.ts` pour l'i
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-    ```ts
+  ```ts
+
+    type FilterableContext<DB> = SelectableContext<DB> & {
+      _fields: (keyof DB[keyof DB])[] | "ALL";
+    };
+
+    type AnyFilterableContext = FilterableContext<any>;
+
     export const where = <
-      Ctx extends AnySelectableContext,
+      Ctx extends AnyFilterableContext,
       Field extends keyof Ctx["_db"][Ctx["_table"]]
     >(
       ctx: Ctx,
