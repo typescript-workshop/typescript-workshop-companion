@@ -34,13 +34,13 @@ type Database = {
 // les noms des tables sont les clés du type qui représente notre base de données
 ```
 
-On peut accéder au type de `_db` au moyen d'un _lookup type_ via le type de notre _contexte_.
+On peut accéder au type de `$db` au moyen d'un _lookup type_ via le type de notre _contexte_.
 
 ```ts
 const context = buildContext<Database>();
 type Context = typeof context;
-//    ^? type Context = { _db: Database }
-type AccessedType = Context["_db"];
+//    ^? type Context = { $db: Database }
+type AccessedType = Context["$db"];
 //    ^? AccessedType = Database
 ```
 

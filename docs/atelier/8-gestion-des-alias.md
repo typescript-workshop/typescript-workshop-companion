@@ -29,7 +29,7 @@ type AliasedTabled<TB> = `${TB & string} ${string}`;
 //                              ^? la table  ^? son alias
 type TableOrAlias<TB> = TB | AliasedTabled<TB>;
 
-type AnyTable<Ctx extends AnyEmptyContext> = TableOrAlias<keyof Ctx["_db"]>;
+type AnyTable<Ctx extends AnyEmptyContext> = TableOrAlias<keyof Ctx["$db"]>;
 
 export const selectFrom = <
   Ctx extends AnyEmptyContext,
@@ -62,7 +62,7 @@ export type ExplicitableField<
 
 export const selectFields = <Ctx extends AnySelectableContext>(
   ctx: Ctx,
-  fieldNames: ExplicitableField<Ctx["_db"], Ctx["_table"]>[]
+  fieldNames: ExplicitableField<Ctx["$db"], Ctx["_table"]>[]
 ) => ({
   ...ctx,
   _fields: fieldNames,
