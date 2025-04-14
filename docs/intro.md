@@ -51,4 +51,5 @@ L'extension .spec-d permet d'indiquer qu'il s'agit de fichiers de test où l'on 
 - Appuyez-vous sur les indices qui sont progressifs que vous trouverez dans chaque exercice.
 - La section "ressources" est là pour vous aiguiller sur les concepts qui sont abordés dans l'exercice.
 - Avant de passer à l'exercice suivant, nous vous conseillons de comparer votre code avec la solution.
+- Prenez le temps de refactorer, par exemple en extrayant vos types, se sera plus facile pour la suite.
 - Une question, un doute, un concept peu clair appelez-nous !
