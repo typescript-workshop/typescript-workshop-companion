@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Exercice 1 | Typescript Workshop Companion</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://typescript-workshop.github.io/typescript-workshop-companion/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://typescript-workshop.github.io/typescript-workshop-companion/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://typescript-workshop.github.io/typescript-workshop-companion/docs/atelier/opaque"><meta data-rh="true" property="og:locale" content="fr"><meta data-rh="true" name="docusaurus_locale" content="fr"><meta data-rh="true" name="docsearch:language" content="fr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Exercice 1 | Typescript Workshop Companion"><meta data-rh="true" name="description" content="- Rajouter un exemple avec des pommes"><meta data-rh="true" property="og:description" content="- Rajouter un exemple avec des pommes"><link data-rh="true" rel="icon" href="/typescript-workshop-companion/img/favicon-32x32.png"><link data-rh="true" rel="canonical" href="https://typescript-workshop.github.io/typescript-workshop-companion/docs/atelier/opaque"><link data-rh="true" rel="alternate" href="https://typescript-workshop.github.io/typescript-workshop-companion/docs/atelier/opaque" hreflang="fr"><link data-rh="true" rel="alternate" href="https://typescript-workshop.github.io/typescript-workshop-companion/docs/atelier/opaque" hreflang="x-default"><link rel="stylesheet" href="/typescript-workshop-companion/assets/css/styles.1c54d33e.css">
-<script src="/typescript-workshop-companion/assets/js/runtime~main.24d9f591.js" defer="defer"></script>
+<script src="/typescript-workshop-companion/assets/js/runtime~main.7057ed6d.js" defer="defer"></script>
 <script src="/typescript-workshop-companion/assets/js/main.3212d178.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -17,14 +17,14 @@
 <p>Expliciter le concept du type opaque et donner un exemple.</p>
 </li>
 <li>
-<p>Enlever le symbol le mettre peut être plutôt en pour aller plus loin.</p>
+<p>Enlever le symbol le mettre peut être plutôt en pour aller plus loin. ✅</p>
 </li>
 <li>
 <p>Pas clair</p>
 </li>
 </ul></div></div>
 <p>On commence tout doucement avec un exercice basique en créant un type utilitaire pour générer des types opaques.</p>
-<p>Rien ne ressemble plus à un id qu&#x27;un autre id, alors faisons en sorte que ce ne soit pas de simple <code>string</code> et laissons Typescript nous aider à toujours fournir la bonne donnée au bon endroit 💪</p>
+<p>Rien ne ressemble plus à un id qu&#x27;un autre id, alors faisons en sorte que ce ne soit pas de simple <code>string</code> et laissons TypeScript nous aider à toujours fournir la bonne donnée au bon endroit 💪</p>
 <p>Autre avantage, à la lecture cela nous permettra de faire le lien entre le métier et le code plus facilement.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>Ressources</div><div class="admonitionContent_BuS1"><ul>
 <li><a href="/typescript-workshop-companion/docs/typescript/generic">Types génériques</a></li>
