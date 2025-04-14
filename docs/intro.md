@@ -37,4 +37,18 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 :::info Setup
 
 Une fois le repository cloné, n'oubliez pas de lancer la commande `npm install` ou `yarn install`
+
+Pour lancer les tests vous pouvez utiliser la commande `npm run test` ou `yarn run test`
+
+L'extension .spec-d permet d'indiquer qu'il s'agit de fichiers de test où l'on test le typage.
+
 :::
+
+## Conseils avant de commencer
+
+- L'exercice 0 va vous permettre de parcourir les concepts de bases
+- À partir de l'exercice 1, nous commencerons à construire notre builder de requêtes SQL.
+- Appuyez-vous sur les indices qui sont progressifs que vous trouverez dans chaque exercice.
+- La section "ressources" est là pour vous aiguiller sur les concepts qui sont abordés dans l'exercice.
+- Avant de passer à l'exercice suivant, nous vous conseillons de comparer votre code avec la solution.
+- Une question, un doute, un concept peu clair appelez-nous !
