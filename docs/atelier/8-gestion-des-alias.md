@@ -10,6 +10,8 @@ Même si nous pas encore d'implémentations pour les formules ou les jointures, 
 
 Ne serait-ce que pour bien garder en tête qu'on est en train de manipuler des `codes_pays` quand bien même `c_iso_3166` signifie la même chose !
 
+![aliases autocomplete](img/aliases_autocomplete.png)
+
 Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
