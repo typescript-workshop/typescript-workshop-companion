@@ -50,7 +50,7 @@ Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'im
 <details>
   <summary>Utiliser ces alias</summary>
   
-  Pour savoir si une syntaxe est acceptable il va par exemple falloir déterminer si, une table est aliasée ou non. Dans ce cas on peut se demander si son invocation `extends` une structure du type `le_nom_de_la_table son_alias` on non !   
+  Pour savoir si une syntaxe est acceptable il va par exemple falloir déterminer si une table est aliasée ou non. Dans ce cas on peut se demander si son invocation `extends` une structure du type `le_nom_de_la_table son_alias` ou non !   
 </details>
 
 ## Solution
