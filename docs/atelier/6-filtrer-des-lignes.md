@@ -52,7 +52,7 @@ Au final, on va utiliser ici beaucoup de choses qu'on a déjà pu aborder : _loo
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-````ts
+```ts
 
   type FilterableContext<DB> = SelectableContext<DB> & {
     _fields: (keyof DB[keyof DB])[] | "ALL";
@@ -79,4 +79,3 @@ Au final, on va utiliser ici beaucoup de choses qu'on a déjà pu aborder : _loo
   ```
 
 </details>
-````
