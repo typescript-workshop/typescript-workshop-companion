@@ -21,27 +21,30 @@ Rendez-vous dans le fichier `6-filtrer-des-lignes.spec-d.ts` et `db.ts` pour l'i
 :::
 
 ## Indice 1
+
 <details>
   <summary>Tout est là</summary>
 
-  La signature de `where` dépend du type du contexte (en l'occurence de _sélection_ dans une _table_ d'une base de donnée arbitraire) ainsi que du nom et du type de champ (qu'on peut déduire de la _table_) sur lequel le filtre sera appliqué.
-  
+La signature de `where` dépend du type du contexte (en l'occurence de _sélection_ dans une _table_ d'une base de donnée arbitraire) ainsi que du nom et du type de champ (qu'on peut déduire de la _table_) sur lequel le filtre sera appliqué.
+
 </details>
 
 ## Indice 2
+
 <details>
   <summary>Faisons simple</summary>
 
-  Pour le moment nous n'implémentons qu'une clause d'égalité, un type littéral devrait faire l'affaire pour l'argument `operator` !
-  
+Pour le moment nous n'implémentons qu'une clause d'égalité, un type littéral devrait faire l'affaire pour l'argument `operator` !
+
 </details>
 
 ## Indice 3
+
 <details>
   <summary>Panachage</summary>
 
-  Au final on va utiliser ici beaucoup de choses qu'on a déjà pu aborder: _lookup types_, mots-clé _keyof_ ou _extends_. 
-  
+Au final on va utiliser ici beaucoup de choses qu'on a déjà pu aborder: _lookup types_, mots-clé _keyof_ ou _extends_.
+
 </details>
 
 ## Solution
@@ -49,30 +52,31 @@ Rendez-vous dans le fichier `6-filtrer-des-lignes.spec-d.ts` et `db.ts` pour l'i
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-  ```ts
+````ts
 
-    type FilterableContext<DB> = SelectableContext<DB> & {
-      _fields: (keyof DB[keyof DB])[] | "ALL";
-    };
+  type FilterableContext<DB> = SelectableContext<DB> & {
+    _fields: (keyof DB[keyof DB])[] | "ALL";
+  };
 
-    type AnyFilterableContext = FilterableContext<any>;
+  type AnyFilterableContext = FilterableContext<any>;
 
-    export const where = <
-      Ctx extends AnyFilterableContext,
-      Field extends keyof Ctx["_db"][Ctx["_table"]]
-    >(
-      ctx: Ctx,
-      field: Field,
-      operator: "=",
-      value: Ctx["_db"][Ctx["_table"]][Field]
-    ) => ({
-      ...ctx,
-      _where: {
-        field,
-        operator,
-        value,
-      },
-    });
-    ```
+  export const where = <
+    Ctx extends AnySelectableContext,
+    Field extends keyof Ctx["$db"][Ctx["_table"]]
+  >(
+    ctx: Ctx,
+    field: Field,
+    operator: "=",
+    value: Ctx["$db"][Ctx["_table"]][Field]
+  ) => ({
+    ...ctx,
+    _where: {
+      field,
+      operator,
+      value,
+    },
+  });
+  ```
 
 </details>
+````

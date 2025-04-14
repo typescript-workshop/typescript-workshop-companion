@@ -24,26 +24,27 @@ Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pou
 <details>
   <summary>Les clés sont restées sur la table</summary>
   
-  Si l'on souhaite bénéficier d'autocomplétion en invoquant `selectFrom` on peut inférer les noms des tables disponibles à partir du type de notre `Database` courante. Et la valeur adossée à la clé `_db` du _contexte_ est justement de type `Database`.
+  Si l'on souhaite bénéficier d'autocomplétion en invoquant `selectFrom` on peut inférer les noms des tables disponibles à partir du type de notre `Database` courante. Et la valeur adossée à la clé `$db` du _contexte_ est justement de type `Database`.
 
-  ```ts
-  type Database = {
-    users: UserTable;
-    companies: CompanyTable;
-  };
-  // les noms des tables sont les clés du type qui représente notre base de données
-  ```
+```ts
+type Database = {
+  users: UserTable;
+  companies: CompanyTable;
+};
+// les noms des tables sont les clés du type qui représente notre base de données
+```
 
-  On peut accéder au type de `_db` au moyen d'un _lookup type_ via le type de notre _contexte_. 
-  ```ts
-  const context = buildContext<Database>();
-  type Context = typeof context;
-  //    ^? type Context = { _db: Database }
-  type AccessedType = Context["_db"]
-  //    ^? AccessedType = Database
-  ```
+On peut accéder au type de `_db` au moyen d'un _lookup type_ via le type de notre _contexte_.
 
+```ts
+const context = buildContext<Database>();
+type Context = typeof context;
+//    ^? type Context = { _db: Database }
+type AccessedType = Context["_db"];
+//    ^? AccessedType = Database
+```
 
+On peut accéder au type de `$db` au moyen d'un _lookup type_ via le type de notre _contexte_.
 
 </details>
 
@@ -52,20 +53,20 @@ Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pou
 <details>
   <summary>(encore) quelques clés pour avancer</summary>
 
-  Ce qu'on peut imaginer serait d'extraire les noms des tables telles qu'elles existent dans la clé `_db` de notre _contexte_.
-  
-  Typiquement ici, les noms des tables auxquelles nous pourrions vouloir accéder sont les clés de l'objet en valeur de la clé `_db`. Pour extraire les clé d'un objet on dispose de l'opérateur `keyof`.
+Ce qu'on peut imaginer serait d'extraire les noms des tables telles qu'elles existent dans la clé `$db` de notre _contexte_.
 
-  Par exemple: 
+Typiquement ici, les noms des tables auxquelles nous pourrions vouloir accéder sont les clés de l'objet en valeur de la clé `$db`. Pour extraire les clé d'un objet on dispose de l'opérateur `keyof`.
 
-  ```ts
-  type ShopDatabase = {
-    products: ProductTable,
-    carts: CartTable
-  }
+Par exemple:
 
-  type TableNames = keyof ShopDatabase // "products" | "carts"
-  ```
+```ts
+type ShopDatabase = {
+  products: ProductTable;
+  carts: CartTable;
+};
+
+type TableNames = keyof ShopDatabase; // "products" | "carts"
+```
 
 </details>
 
@@ -74,20 +75,19 @@ Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pou
 <details>
   <summary>L'embarras du choix</summary>
 
-  On voit que `selectFrom` prend en premier paramètre un contexte initialisé avec le type d'une base de donnée. Il pourrait être utile que la signature de `selectFrom` prenne cela en compte.
+On voit que `selectFrom` prend en premier paramètre un contexte initialisé avec le type d'une base de donnée. Il pourrait être utile que la signature de `selectFrom` prenne cela en compte.
 
-  De part l'attendu de l'exercice précédent le type de retour de `buildContext<DB>()` nous est connu : 
+De part l'attendu de l'exercice précédent le type de retour de `buildContext<DB>()` nous est connu :
 
-  ```ts
-  type EmptyContext<DB> = {
-    _db: DB;
-  };
-  ```
+```ts
+type EmptyContext<DB> = {
+  $db: DB;
+};
+```
 
-  Mais nous ne connaissons pas à l'avance `DB`, le type de base de données qui serait _in fine_ consommées par `selectFrom`.
-  
-  C'est un peu contraignant pour définir la signature de notre fonction de savoir qu'elle devra prendre en charge _n'importe quel_ (any ?) type de base donnée...
+Mais nous ne connaissons pas à l'avance `DB`, le type de base de données qui serait _in fine_ consommées par `selectFrom`.
 
+C'est un peu contraignant pour définir la signature de notre fonction de savoir qu'elle devra prendre en charge _n'importe quel_ (any ?) type de base donnée...
 
 </details>
 
@@ -98,13 +98,13 @@ Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pou
 
     ```ts
     type EmptyContext<DB> = {
-      _db: DB;
+      $db: DB;
     };
     type AnyEmptyContext = EmptyContext<any>;
 
     export const selectFrom = <
       Ctx extends AnyEmptyContext,
-      TB extends keyof Ctx["_db"]
+      TB extends keyof Ctx["$db"]
     >(
       ctx: Ctx,
       tableName: TB

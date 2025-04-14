@@ -18,19 +18,21 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
 :::
 
 ## Indice 1
+
 <details>
   <summary>Choix de l'opération</summary>
 
-  On peut s'attendre à ce que `deleteFrom` opére dans un contexte similaire à `selectFrom`. D'ailleurs la seule différence est que cette fonction viendra enrichir le contexte qui lui est fourni avec un _autre type d'opération_. 
-  
+On peut s'attendre à ce que `deleteFrom` opére dans un contexte similaire à `selectFrom`. D'ailleurs la seule différence est que cette fonction viendra enrichir le contexte qui lui est fourni avec un _autre type d'opération_.
+
 </details>
 
 ## Indice 2
+
 <details>
   <summary>Jusqu'**où** cela nous mène</summary>
 
-  On avait typé la fonction `where` pour qu'elle opère à partir d'un _contexte_ de **sélection**. Il faut à présent prendre en compte qu'elle peut également opérer dans un contexte de **suppression** 
-  
+On avait typé la fonction `where` pour qu'elle opère à partir d'un _contexte_ de **sélection**. Il faut à présent prendre en compte qu'elle peut également opérer dans un contexte de **suppression**
+
 </details>
 
 ## Solution
@@ -46,7 +48,7 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
 
     export const deleteFrom = <
       Ctx extends AnyEmptyContext,
-      TB extends keyof Ctx["_db"]
+      TB extends keyof Ctx["$db"]
     >(
       ctx: Ctx,
       tableName: TB
@@ -64,7 +66,7 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
 
     export const where = <
       Ctx extends AnyQueryableContext,
-      Field extends keyof Ctx["_db"][Ctx["_table"]]
+      Field extends keyof Ctx["$db"][Ctx["_table"]]
     >(...) => {...}
     ```
 

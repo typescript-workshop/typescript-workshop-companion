@@ -22,51 +22,51 @@ Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'im
 <details>
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
-  Alias sur les tables :
+Alias sur les tables :
 
-  ```ts
-  type AliasedTabled<TB> = `${TB & string} ${string}`;
-  //                              ^? la table  ^? son alias
-  type TableOrAlias<TB> = TB | AliasedTabled<TB>;
+```ts
+type AliasedTabled<TB> = `${TB & string} ${string}`;
+//                              ^? la table  ^? son alias
+type TableOrAlias<TB> = TB | AliasedTabled<TB>;
 
-  type AnyTable<Ctx extends AnyEmptyContext> = TableOrAlias<keyof Ctx["_db"]>;
+type AnyTable<Ctx extends AnyEmptyContext> = TableOrAlias<keyof Ctx["_db"]>;
 
-  export const selectFrom = <
-    Ctx extends AnyEmptyContext,
-    TB extends AnyTable<Ctx>
-  >(
-    ctx: Ctx,
-    tableName: TB
-  ) => ({
-    ...ctx,
-    _operation: "select" as const,
-    _table: tableName,
-  });
-  ```
+export const selectFrom = <
+  Ctx extends AnyEmptyContext,
+  TB extends AnyTable<Ctx>
+>(
+  ctx: Ctx,
+  tableName: TB
+) => ({
+  ...ctx,
+  _operation: "select" as const,
+  _table: tableName,
+});
+```
 
-  Alias sur les champs
+Alias sur les champs
 
-  ```ts
-  type AliasableField<DB extends AnyDB, TB extends keyof DB> =
-    | keyof DB[TB]
-    | `${keyof DB[TB] & string} as ${string}`;
+```ts
+type AliasableField<DB extends AnyDB, TB extends keyof DB> =
+  | keyof DB[TB]
+  | `${keyof DB[TB] & string} as ${string}`;
 
-  export type ExplicitableField<
-    DB extends AnyDB,
-    TB extends keyof DB
-  > = TB extends `${infer Table} ${infer Alias}`
-    ? AliasableField<DB, Table> | `${Alias}.${AliasableField<DB, Table> & string}`
-    : //                               ^? On peut utiliser l'alias de la table (et/ou du champs)
-        | AliasableField<DB, TB>
-        | `${TB & string}.${AliasableField<DB, TB> & string}`;
-        
-  export const selectFields = <Ctx extends AnySelectableContext>(
-    ctx: Ctx,
-    fieldNames: ExplicitableField<Ctx["_db"], Ctx["_table"]>[]
-  ) => ({
-    ...ctx,
-    _fields: fieldNames,
-  });
-  ```
+export type ExplicitableField<
+  DB extends AnyDB,
+  TB extends keyof DB
+> = TB extends `${infer Table} ${infer Alias}`
+  ? AliasableField<DB, Table> | `${Alias}.${AliasableField<DB, Table> & string}`
+  : //                               ^? On peut utiliser l'alias de la table (et/ou du champs)
+    | AliasableField<DB, TB>
+      | `${TB & string}.${AliasableField<DB, TB> & string}`;
+
+export const selectFields = <Ctx extends AnySelectableContext>(
+  ctx: Ctx,
+  fieldNames: ExplicitableField<Ctx["_db"], Ctx["_table"]>[]
+) => ({
+  ...ctx,
+  _fields: fieldNames,
+});
+```
 
 </details>

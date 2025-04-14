@@ -34,7 +34,7 @@ Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pou
   
   Nous sommes dans un cas similaire à l'exercice précédent, simplement cette fois-ci on veut pouvoir inférer le types de propriétés nichées un peu plus profondément que les noms des tables.
 
-  Suite à l'invocation de `selectFrom` on dispose, dans notre _contexte_ d'un peu plus d'information : on sait que nous construisons une operation `select` et surtout quelle table nous allons interroger. Il est alors possible d'extraire, depuis le _contexte_, les ~~types des clés~~ _noms de champs_ de la table ciblée et ainsi faire en sorte que `selectFields` n'accepte en second paramètre qu'un tableau dont les éléments sont des membres de champs de la table cible.
+Suite à l'invocation de `selectFrom` on dispose, dans notre _contexte_ d'un peu plus d'information : on sait que nous construisons une operation `select` et surtout quelle table nous allons interroger. Il est alors possible d'extraire, depuis le _contexte_, les ~~types des clés~~ _noms de champs_ de la table ciblée et ainsi faire en sorte que `selectFields` n'accepte en second paramètre qu'un tableau dont les éléments sont des membres de champs de la table cible.
 
 </details>
 
@@ -69,7 +69,7 @@ Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pou
     type AnySelectableContext = SelectableContext<any>;
     export const selectFields = <Ctx extends AnySelectableContext>(
       ctx: Ctx,
-      fieldNames: (keyof Ctx["_db"][Ctx["_table"]])[]
+      fieldNames: (keyof Ctx["$db"][Ctx["_table"]])[]
     ) => ({
       ...ctx,
       _fields: fieldNames,

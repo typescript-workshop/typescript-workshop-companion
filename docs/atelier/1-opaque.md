@@ -2,16 +2,16 @@
 sidebar_position: 1
 ---
 
-
 # Exercice 1
 
 :::note TODO
+
 - Rajouter un exemple avec des pommes
 - Expliciter le concept du type opaque et donner un exemple.
 - Enlever le symbol le mettre peut être plutôt en pour aller plus loin.
 
 - Pas clair
-:::
+  :::
 
 On commence tout doucement avec un exercice basique en créant un type utilitaire pour générer des types opaques.
 
@@ -25,7 +25,6 @@ Autre avantage, à la lecture cela nous permettra de faire le lien entre le mét
 - [Template literal](../typescript/template-literal.md)
 
 :::
-
 
 ## Solution
 
