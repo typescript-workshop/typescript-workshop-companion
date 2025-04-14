@@ -136,10 +136,10 @@ type Opaque<A, B extends string> = A & {
 };
 ```
 
-Un types _opaques_ adjoint une sorte d'_étiquette_ à un type générique, ici "A" (qui peut donc être une instance de n'importe quel type).
+Un type _opaques_ adjoint une sorte d'_étiquette_ à un type générique, ici "A" (qui peut donc être une instance de n'importe quel type).
 "B" est également un type générique, avec la contrainte supplémentaire d'être une chaîne de caractères, ce qui nous permettra de construite l'_étiquette_ que nous venons d'évoquer.
 
-Nous pourrons ainsi définir des types spécialisés, ce qui nous permettra de limiter les risques de faire des choses insensées comme passer l'identifiant d'une entreprise à une fonction qui n'est sensée traiter que des identifiants d'utilisateurs.
+Nous pourrons ainsi définir des types spécialisés, ce qui nous permettra de limiter les risques de faire des choses insensées comme passer l'identifiant d'une entreprise à une fonction qui n'est censée traiter que des identifiants d'utilisateurs.
 
 ```ts
 type UserId = UUID<"user">;
@@ -149,43 +149,3 @@ const linkUsers = (user1: UserId, user2: UserId) => {
   // on fait des traitements qui n'ont de sens qu'avec des identifiants d'utilisateurs
 };
 ```
-
-À vous de jouer ! Comment définiriez vous le type _opaque_ `UUID` qui permettrait de déclarer des types d'UUID spécialisés ?
-
-```ts
-// On veut pouvoir notamment distinguer deux spécialisations d'UUID
-type UserId = UUID<"user">; // ce type portera l'étiquette 'user_uuid'
-type CompanyId = UUID<"company">; // ce type portera l'étiquette 'company_uuid'
-```
-
-:::tip
-
-<details>
-<summary>Besoin d'un coup de pouce ?</summary>
-
-Voici un exemple qui viserait à distinguer les vecteurs _position_ des vecteurs _vitesse_
-
-```ts
-type Vector3 = { x: number; y: number; z: number };
-
-type Vector<B extends Vector3> = Opaque<Vector3, `${B}_vector`>;
-
-// une position est un Vector3 qui porte l'étiquette 'position_vector'
-type Position = Vector<"position">;
-// une translation est aussi un Vector3 mais qui porte l'étiquette 'translation_vector'
-type Translation = Vector<"translation">;
-
-const updatedPosition = (
-  origin: Position,
-  movement: Translation
-): Position => ({
-  x: origin.x + movement.x,
-  y: origin.y + movement.y,
-  z: origin.z + movement.z,
-});
-```
-
-Notre fonction ne manipule que des types Vector3, mais ces types sont 'spécialisés' afin de s'assurer qu'on ne passe pas un argument de type Position là où un type Translation est attendu (et inversement) par ailleurs on précise que c'est bien une Position que retournera notre fonction
-
-</details>
-:::

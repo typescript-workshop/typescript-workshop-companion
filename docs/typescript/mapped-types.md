@@ -50,14 +50,3 @@ Des librairies viennent proposer d'autres exemple comme Ts-essential
 
 - Les préfix - ou +
   Par défaut le + est implicite, c'est la raison pour laquelle vous ne le verrez jamais écrit. En revanche le préfix - vous permet de retirer ce qui suit, dans la documentation TypeScript vous trouverez -? qui permet ainsi de retirer le caractère optionnel d'une propriété.
-
-### À vous de jouer !
-
-```
-Pour s'entrainer avec les mapped types commençons par le début.
-
-Construire le type de la méthode update avec Partial
-
-
-
-```
