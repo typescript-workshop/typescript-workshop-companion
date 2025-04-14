@@ -20,6 +20,8 @@ L'extension .spec-d permet d'indiquer qu'il s'agit de fichiers de test où l'on 
 
 Pour vous aider à résoudre cette première série de tests, vous pouvez également vous appuyer sur la documentation de votre companion. Dans chaque exercice vous trouverez une section "ressource", comme celle ci-dessous.
 
+Pour chacun des tests, l'objectif est de remplacer le placeholder **\_\_\_\_\_** par le type choisi, par exemple : string.
+
 :::tip Ressources
 
 - [Types primitifs](../typescript/types-primitifs.md)
