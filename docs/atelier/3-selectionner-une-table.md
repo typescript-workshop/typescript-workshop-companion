@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Ça y est, nous avons créé un contexte qui contient notre database 🎉.
 
-Maintenant, nous vous proposons à partir du typage de notre database d'apprendre à sélectionner spécifiquement une table de celle-ci. Pour cela il nous faudra jongler entre les typages de notre database, des tables et de la méthode selectFrom.
+Maintenant, nous vous proposons à partir du typage de notre database d'apprendre à sélectionner spécifiquement une table de celle-ci. Pour cela il nous faudra jongler entre les typages de notre database, des tables et de la méthode `selectFrom`.
 
 Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pour l'implémentation. À vous de jouer !
 
@@ -55,9 +55,9 @@ On peut accéder au type de `$db` au moyen d'un _lookup type_ via le type de not
 
 Ce qu'on peut imaginer serait d'extraire les noms des tables telles qu'elles existent dans la clé `$db` de notre _contexte_.
 
-Typiquement ici, les noms des tables auxquelles nous pourrions vouloir accéder sont les clés de l'objet en valeur de la clé `$db`. Pour extraire les clé d'un objet on dispose de l'opérateur `keyof`.
+Typiquement ici, les noms des tables auxquelles nous pourrions vouloir accéder sont les clés de l'objet en valeur de la clé `$db`. Pour extraire les clés d'un objet, on dispose de l'opérateur `keyof`.
 
-Par exemple:
+Par exemple :
 
 ```ts
 type ShopDatabase = {
@@ -85,7 +85,7 @@ type EmptyContext<DB> = {
 };
 ```
 
-Mais nous ne connaissons pas à l'avance `DB`, le type de base de données qui serait _in fine_ consommées par `selectFrom`.
+Mais nous ne connaissons pas à l'avance `DB`, le type de base de données qui serait _in fine_ consommé par `selectFrom`.
 
 C'est un peu contraignant pour définir la signature de notre fonction de savoir qu'elle devra prendre en charge _n'importe quel_ (any ?) type de base donnée...
 

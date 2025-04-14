@@ -22,7 +22,7 @@ Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l
 <details>
   <summary>Choix de l'opération</summary>
 
-On peut s'attendre à ce que `deleteFrom` opére dans un contexte similaire à `selectFrom`. D'ailleurs la seule différence est que cette fonction viendra enrichir le contexte qui lui est fourni avec un _autre type d'opération_.
+On peut s'attendre à ce que `deleteFrom` opère dans un contexte similaire à `selectFrom`. D'ailleurs la seule différence est que cette fonction viendra enrichir le contexte qui lui est fourni avec un _autre type d'opération_.
 
 </details>
 

@@ -15,7 +15,7 @@ Chaque amélioration compte. Vous pouvez refondre complétement le fichier `db.t
 - Se voir proposer `selectFields` après un `selectFrom`
 - Ne pas pouvoir accéder au `selectFields` après un `selectAll`
 - Ne pas pouvoir accéder au `selectFields` après un `deleteFrom`
-- Pour le moment les exercices sont orientés programmation fonctionnelle mais vous pouvez changer de paradigme en utilisant des classes.
+- Pour le moment les exercices sont orientés programmation fonctionnelle, mais vous pouvez changer de paradigme en utilisant des classes.
 
 ![Dx flow](img/dx_flow.png)
 

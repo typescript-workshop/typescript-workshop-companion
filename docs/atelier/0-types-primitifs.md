@@ -14,6 +14,6 @@ requêtes SQL dans l'exercice 1.
 - [Types primitifs](../typescript/types-primitifs.md)
 - [Types par référence](../typescript/types-par-references.md)
 - [keyof et lookup](../typescript/keyof-lookup.md)
-- [Affirmation de type et types speciaux](../typescript/types-speciaux-affirmation-de-types.md)
+- [Affirmation de type et types spéciaux](../typescript/types-speciaux-affirmation-de-types.md)
 
 :::
