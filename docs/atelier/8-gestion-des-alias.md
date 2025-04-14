@@ -26,7 +26,7 @@ Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'im
 
   ```ts
   type AliasedTabled<TB> = `${TB & string} ${string}`;
-  //                  ^? le nom de la table    ^? son alias
+  //                              ^? la table  ^? son alias
   type TableOrAlias<TB> = TB | AliasedTabled<TB>;
 
   type AnyTable<Ctx extends AnyEmptyContext> = TableOrAlias<keyof Ctx["_db"]>;
@@ -50,7 +50,7 @@ Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'im
   type AliasableField<DB extends AnyDB, TB extends keyof DB> =
     | keyof DB[TB]
     | `${keyof DB[TB] & string} as ${string}`;
-    
+
   export type ExplicitableField<
     DB extends AnyDB,
     TB extends keyof DB
