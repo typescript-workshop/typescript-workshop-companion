@@ -4,11 +4,15 @@ sidebar_position: 3
 
 # Exercice 3
 
-Ça y est, nous avons créé un contexte qui contient notre database 🎉.
+Ça y est, nous avons créé un contexte qui contient le type de notre database 🎉.
 
 Maintenant, nous vous proposons à partir du typage de notre database d'apprendre à sélectionner spécifiquement une table de celle-ci. Pour cela il nous faudra jongler entre les typages de notre database, des tables et de la méthode `selectFrom`.
 
-Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pour l'implémentation. À vous de jouer !
+![selectFrom autocomplete](img/selectFrom_autocomplete.png)
+
+Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pour l'implémentation. 
+
+À vous de jouer !
 
 :::tip Ressources
 
