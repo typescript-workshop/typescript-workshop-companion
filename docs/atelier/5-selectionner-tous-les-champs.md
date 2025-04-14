@@ -2,18 +2,15 @@
 sidebar_position: 5
 ---
 
-
 # Exercice 5
 
-:::note TODO
-Expliquer le select ALL
-:::
+Notre builder de requête SQL progresse, nous sommes maintenant capables de sélectionner des champs d'une table. Ceci étant qui n'a jamais eu besoin de sélectionner tous les champs d'une table ?
 
-Qui n'a jamais eu besoin de sélectionner tous les champs d'une table ?
+Au quotidien, vous avez surement l'habitude d'écrire des requêtes sur un modèle similaire à celui-ci `select * from users`. Dans ce cas le symbole '\*' indique que vous souhaitez récupérer l'ensemble des champs de la table.
 
-Maintenant que TypeScript a de moins en moins de secrets pour vous, nous vous proposons dans cet exercice de faire évoluer le typage afin de pouvoir sélectionner l'ensemble des champs d'une table.
+Dans le cadre de cet atelier le symbol '\*' va être remplacer pour le mot 'ALL' pour simplifier l'exercice.
 
-Rendez-vous dans le fichier `5-selectionner-tous-les-champs.spec-d.ts` et `db.ts` pour l'implémentation.
+Super, maintenant que TypeScript a de moins en moins de secrets pour vous, nous vous proposons de vous plonger dans ce 5ème exercice afin de faire évoluer le typage afin de pouvoir sélectionner l'ensemble des champs d'une table. Pour cela rendez-vous dans le fichier `5-selectionner-tous-les-champs.spec-d.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 
@@ -30,7 +27,7 @@ Rendez-vous dans le fichier `5-selectionner-tous-les-champs.spec-d.ts` et `db.ts
 <details>
   <summary>Tout ou rien</summary>
   
-  On peut réemployer ici le contexte de **sélection** sur une **table** _donnée_. Par contre `selectAll` n'enrichira pas la clé `_fields` du contexte avec un tableau de noms de champs, mais avec le mot-clé `ALL`. Dans ce cas, il faut dire au compilateur d'inférer le type le plus précis possible à partir de cette expression (i.e. le type littéral `ALL`). 
+  On peut réemployer ici le contexte de **sélection** sur une **table** _donnée_. Par contre `selectAll` n'enrichira pas la clé `_fields` du contexte avec un tableau de noms de champs, mais avec le mot-clé `ALL`. Dans ce cas, il faut dire au compilateur d'inférer le type le plus précis possible à partir de cette expression (i.e. le type littéral `ALL`).
 
 </details>
 
