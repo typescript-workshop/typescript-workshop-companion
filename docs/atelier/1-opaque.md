@@ -30,7 +30,7 @@ On se doute bien que ça ne va pas aussi bien se passer à l'exécution...
 
 ## Comment les types opaques peuvent ils nous aider ?
 
-Les types opaques (aussi connus sous le nom `branded types`) permettent de créer des types distincts pour que le compilateur puisse garantir la bonne utilisation de chaque type dans toute notre base de code 💪
+Les types opaques (aussi connus sous le nom _branded types_) permettent de créer des types distincts pour que le compilateur puisse garantir la bonne utilisation de chaque type dans toute notre base de code 💪
 
 ```ts
 type UserId = Opaque<string, 'user'>;

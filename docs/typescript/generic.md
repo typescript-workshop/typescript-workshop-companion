@@ -107,7 +107,7 @@ const otherUser = merge({ name: "Jean-Foo-Bar" }, 42);
 console.log(otherUser); // { name: 'Jean-Foo-Bar'}
 ```
 
-Heureusement nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends`.
+Heureusement, nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends`.
 Ainsi le compilateur nous alertera si on tente de fournir un argument qui ne satisfait pas cette contrainte.
 
 ```ts
@@ -124,7 +124,7 @@ const otherUser = merge(
 
 ## Génériques sous contrainte, un exemple d'utilisation
 
-On peut parfois avoir à faire à des types identiques bien qu'ils puissent représenter des choses différentes.
+On peut parfois avoir affaire à des types identiques bien qu'ils puissent représenter des choses différentes.
 Par exemple un UUID (a.k.a. une chaîne de caractères) peut être l'identifiant d'un utilisateur (UserId) tandis qu'un autre pourrait être celui d'une entreprise (CompanyId).
 
 Les types _opaques_ permettent de définir de telles distinctions et ainsi de s'assurer qu'on emploie telle ou telle variable à bon escient/

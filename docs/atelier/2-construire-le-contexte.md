@@ -4,15 +4,12 @@ sidebar_position: 2
 
 # Exercice 2
 
-:::note TODO
-C'est pas clair du tout il faudrait le raccrocher à un cas plus concret.
-:::
-
-`$db` type qui n'a pas vocation à être utilisée au runtime.
-
 Que serait une requête SQL sans database associée et comment les représenter en TypeScript ?
 
 Nous allons créer un contexte qui sera propagé aux différentes fonctions que nous allons créer par la suite. Au fur et à mesure des exercices, nous aurons besoin de l'enrichir, mais pour le moment notre database suffit.
+
+La plupart du temps TypeScript infère le type depuis notre code, mais dans cette partie, **nous allons forcer du typage**.
+Attacher le type de notre base de données au contexte nous permettra de pouvoir le propager et l'inspecter pour les fonctions futures
 
 Rendez-vous dans le fichier `2-context-builder.spec.dt.ts` et `db.ts` pour l'implémentation.
 
@@ -43,7 +40,7 @@ const buildSomething = <T>() => {
 ## Indice 2
 
 <details>
-  <summary>C'est Typescript qui a aprfois besoin d'un coup de pouce</summary>
+  <summary>C'est Typescript qui a parfois besoin d'un coup de pouce</summary>
 
 Dans le cas présent, nous avons des informations que TypeScript n'a pas _à priori_ (le type de notre base de données). Nous pouvons lui apporter plus de précision au lieu de laisser le compilateur tenter d'en inférer le type.
 
@@ -69,7 +66,7 @@ const buildContext = () => {
 ```
 
 Parfois le mot clé `as` (en conjonction avec `any`) peut s'avérer bien utile !
-On peut se douter que _caster_ `undefined` directement vers le type de notre base de données.
+On peut _caster_ `undefined` directement vers le type de notre base de données afin que TypeScript fasse transiter le type dans notre contexte.
 
 </details>
 
