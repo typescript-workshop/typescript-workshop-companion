@@ -6,7 +6,7 @@ sidebar_position: 8
 
 Wow ! On peut maintenant supprimer des enregistrements de notre base de données 🎉.
 
-Même si nous pas encore d'implémentations pour les formules ou les jointures, il pourrait être chouette d'avoir la possibilité de créer des alais, non ?
+Même si nous pas encore d'implémentations pour les formules ou les jointures, il pourrait être chouette d'avoir la possibilité de créer des alias, non ?
 
 Ne serait-ce que pour bien garder en tête qu'on est en train de manipuler des `codes_pays` quand bien même `c_iso_3166` signifie la même chose !
 
@@ -48,9 +48,9 @@ Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'im
 ## Indice 3
 
 <details>
-  <summary>Utiliser ces alais</summary>
+  <summary>Utiliser ces alias</summary>
   
-  // TODO  
+  Pour savoir si une syntaxe est acceptable il va par exemple falloir déterminer si, une table est aliasée ou non. Dans ce cas on peut se demander si son invocation `extends` une structure du type `le_nom_de_la_table son_alias` on non !   
 </details>
 
 ## Solution
