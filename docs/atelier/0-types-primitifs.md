@@ -18,7 +18,7 @@ L'extension .spec-d permet d'indiquer qu'il s'agit de fichiers de test où l'on 
 
 :::
 
-Pour vous aider à résoudre cette première série de tests, vous pouvez également vous appuyer sur la documentation de votre companion. Dans chaque exercice vous trouverez une section "resources", comme celle ci-dessous.
+Pour vous aider à résoudre cette première série de tests, vous pouvez également vous appuyer sur la documentation de votre companion. Dans chaque exercice vous trouverez une section "ressource", comme celle ci-dessous.
 
 :::tip Ressources
 
