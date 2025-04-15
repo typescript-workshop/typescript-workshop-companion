@@ -1,16 +1,23 @@
 ---
-sidebar_position: 3
+sidebar_position: 8
 ---
 
 # Keyof
 
-L'operateur `keyof` permet de recuperer les clés d'un type
+L'opérateur `keyof` permet d'accéder aux clés des propriétés d'un objet.
 
 ## Utilisation courante
 
 La plupart du temps vous voudrez l'utiliser lors de la transformation d'un type avec un mapped type ou pour appliquer des contraintes sur un type generique.
 
 Grace à cette opérateur vous pourrez recuperer les clés d'un objet
+
+```ts
+type Workshop = { name: string; schedule: number };
+type WorkshopKeys = keyof Workshop; // "name" | "schedule"
+```
+
+Autre exemple :
 
 ```ts
 type Foo = {

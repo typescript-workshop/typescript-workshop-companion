@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 ---
 
 # Types par références : Arrays, Tuples et Objets
@@ -20,11 +20,11 @@ La syntaxe `<type>` correspond à un type générique, nous vous invitons à par
 Si on souhaite stocker des types des différents dans un tableau, nous pouvons utiliser des tuples. Un tuple représente une collection de valeurs ordonnées. Par exemple :
 
 ```ts
-type MyTuple = [string, number, boolean]
-const myTuple : MyTuple = ['workshop', 12, true]
+type MyTuple = [string, number, boolean];
+const myTuple: MyTuple = ["workshop", 12, true];
 
-const myWrongTuple : MyTuple = [ 12, 'workshop',true]
-//TS type string incompatible avec type number
+const myWrongTuple: MyTuple = [12, "workshop", true];
+// ^? TS type string incompatible avec type number
 ```
 
 ## Les objets

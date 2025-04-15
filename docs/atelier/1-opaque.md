@@ -21,8 +21,8 @@ function getUser(userId: UserId) {
   // some logic
 }
 
-const id: CompanyId = '1be076b0-31f7-448e-a7c4-14f5b5dd0437'
-getUser(id)
+const id: CompanyId = "1be076b0-31f7-448e-a7c4-14f5b5dd0437";
+getUser(id);
 ```
 
 L'exemple ci-dessus est complètement valide à la compilation 😱.
@@ -33,17 +33,17 @@ On se doute bien que ça ne va pas aussi bien se passer à l'exécution...
 Les types opaques (aussi connus sous le nom _branded types_) permettent de créer des types distincts pour que le compilateur puisse garantir la bonne utilisation de chaque type dans toute notre base de code 💪
 
 ```ts
-type UserId = Opaque<string, 'user'>;
+type UserId = Opaque<string, "user">;
 
-type CompanyId = Opaque<string, 'company'>;
+type CompanyId = Opaque<string, "company">;
 
 function getUser(userId: UserId) {
   // some logic
 }
 
-const id = '1be076b0-31f7-448e-a7c4-14f5b5dd0437' as CompanyId
-getUser(id)
-//      ^ Argument of type 'CompanyId' is not assignable to parameter of type 'UserId'. 
+const id = "1be076b0-31f7-448e-a7c4-14f5b5dd0437" as CompanyId;
+getUser(id);
+//      ^? Argument of type 'CompanyId' is not assignable to parameter of type 'UserId'.
 ```
 
 ## Exercice
