@@ -10,7 +10,7 @@ Au quotidien, vous avez surement l'habitude d'écrire des requêtes sur un modè
 
 Dans le cadre de cet atelier le symbol '\*' va être remplacer pour le mot 'ALL' pour simplifier l'exercice.
 
-Super, maintenant que TypeScript a de moins en moins de secrets pour vous, nous vous proposons de vous plonger dans ce 5ème exercice afin de faire évoluer le typage afin de pouvoir sélectionner l'ensemble des champs d'une table. Pour cela rendez-vous dans le fichier `5-selectionner-tous-les-champs.spec-d.ts` et `db.ts` pour l'implémentation.
+Super, maintenant que TypeScript a de moins en moins de secrets pour vous, nous vous proposons de vous plonger dans ce 5ème exercice afin de faire évoluer le typage afin de pouvoir sélectionner l'ensemble des champs d'une table. Pour cela rendez-vous dans le fichier `5-selectionner-tous-les-champs.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

@@ -12,7 +12,7 @@ Ne serait-ce que pour bien garder en tête qu'on est en train de manipuler des `
 
 ![aliases autocomplete](img/aliases_autocomplete.png)
 
-Rendez-vous dans le fichier `8-gestion-des-alias.spec-d.ts` et `db.ts` pour l'implémentation.
+Rendez-vous dans le fichier `8-gestion-des-alias.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

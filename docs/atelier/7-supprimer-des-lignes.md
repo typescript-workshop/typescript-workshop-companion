@@ -6,7 +6,7 @@ sidebar_position: 7
 
 L'objectif de cet atelier est de créer un builder de requêtes SQL. Les exercices précédents nous ont permis de sélectionner, filtrer, mais nous ne sommes pas encore capables de selectionner des données à supprimer, pourtant ça serait canon !
 
-Remiedions à cela en créant notre méthode nous le permettant. Rendez-vous dans le fichier `7-supprimer-des-lignes.spec-d.ts` et `db.ts` pour l'implémentation.
+Remiedions à cela en créant notre méthode nous le permettant. Rendez-vous dans le fichier `7-supprimer-des-lignes.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer ! 🎉
 

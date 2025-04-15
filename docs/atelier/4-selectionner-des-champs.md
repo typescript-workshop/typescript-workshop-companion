@@ -8,7 +8,7 @@ Nous vous proposons de typer la fonction `selectFields` qui, à partir du typage
 
 ![selectFields autocomplete](img/selectFields_autocomplete.png)
 
-Rendez-vous dans le fichier `4-selectionner-des-champs.spec-d.ts` et `db.ts` pour l'implémentation.
+Rendez-vous dans le fichier `4-selectionner-des-champs.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

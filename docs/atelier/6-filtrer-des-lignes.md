@@ -11,7 +11,7 @@ Par exemple dans les tests, nous nous amuserons à filtrer sur la date de naissa
 
 ![where autocomplete](img/where_autocomplete.png)
 
-Rendez-vous dans le fichier `6-filtrer-des-lignes.spec-d.ts` et `db.ts` pour l'implémentation.
+Rendez-vous dans le fichier `6-filtrer-des-lignes.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

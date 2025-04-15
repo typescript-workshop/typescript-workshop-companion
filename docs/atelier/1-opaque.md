@@ -50,7 +50,7 @@ getUser(id)
 
 La création du type `Opaque` n'est pas évidente et nous vous la donnons (c'est volontairement une version simplifiée pour ne pas vous embrouiller). Nous allons créer un type utilitaire `UUID` qui va se servir du type opaque.
 
-Rendez-vous dans le fichier `1-opaque.spec-d.ts` et `utils.ts` pour l'implémentation.
+Rendez-vous dans le fichier `1-opaque.ts` et `utils.ts` pour l'implémentation.
 
 À vous de jouer !
 
