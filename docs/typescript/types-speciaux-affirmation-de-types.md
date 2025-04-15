@@ -22,6 +22,6 @@ Il existe deux syntaxes possibles :
 
 :::tip Les relations entre les types
 
-Curieux, curieuse, d'en savoir plus sur comment intéragissent les types entre eux rendez-vous dans la section [Hierarchie des types](img/ts_types_hierarchy.png)
+Curieux, curieuse, d'en savoir plus sur comment intéragissent les types entre eux rendez-vous dans la section [hiérarchie des types](./type-hierarchy.md)
 
 :::

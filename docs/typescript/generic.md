@@ -16,7 +16,7 @@ const identity = (arg) => {
 
 ...et on s'attend du coup à ce que le type du retour de la fonction soit identique au type fourni en entrée.
 On aimerait typer l'entrée et la sortie de cette fonction afin de s'assurer que cette contrainte est bien respectée, quel que soit le type de l'argument effectivement passé à `identity`.
-Comme `identity` peut prendre un argument de n'importe quel type on pourrait être tentés de la typer ainsi :
+Comme `identity` peut prendre un argument de n'importe quel type, on pourrait être tentés de la typer ainsi :
 
 ```ts
 const identity = (arg: any): any => {
@@ -39,7 +39,7 @@ identity(true):
 // ^? 'true'
 ```
 
-Mais on on voudrait bel et bien **garantir** qu'on obtiendra en sortie le même type qu'en entrée.
+Mais on voudrait bel et bien **garantir** qu'on obtiendra en sortie le même type qu'en entrée.
 On pourrait envisager de surcharger la signature de notre fonction mais ce serait au prix (1) d'une grande verbosité et (2) d'un risque accru d'oubli.
 
 ```ts

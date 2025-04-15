@@ -6,7 +6,7 @@ sidebar_position: 10
 
 Le systeme de type permet d'ajouter des conditions afin de produire des types en fonctions de certaines conditions avec le mot-clé `extends`
 
-Il est important de bien assimiler la hierachie des types afin de maitriser les types conditionnels.
+Il est important de bien assimiler la [hiérarchie des types](./type-hierarchy.md) afin de maitriser les types conditionnels.
 
 ## Types par défaut
 
@@ -24,7 +24,7 @@ https://www.typescriptlang.org/docs/handbook/utility-types.html
 
 ### Match ou Equal
 
-Grace au typage conditionnel nous pouvons par exemple créer des types utilitaires pour des tests
+Grâce au typage conditionnel, nous pouvons par exemple créer des types utilitaires pour des tests.
 
 ```ts
 type A = { foo: string };
@@ -47,9 +47,3 @@ type Equal = B extends A
   : "is not equal";
 // type Equal = "is not equal"
 ```
-
-:::tip
-La lecture du typage Typescript etant compliquée, n'hesitez pas a tester vos types
-
-https://vitest.dev/api/expect-typeof.html
-:::

@@ -14,15 +14,15 @@ type French = "french";
 
 ## Templates
 
-Il est également possible de définir des _gabarits_ de types littéraux
+Il est également possible de définir des _gabarits_ de types littéraux.
 
 ```ts
-type CurrentLanguageInfo = `You are browsing our site's ${string} version`; // <= this is a 'template' literal type
+type ContactLanguageInfo = `This user speaks ${string}.`; // <= this is a 'template' literal type
 
-const displayCurrentLanguageInfo = (
-  currentLanguage: string
-): CurrentLanguageInfo => {
-  return `You browsing our site's ${currentLanguage} version`;
+const displayContactLanguageInfo = (
+  contactLanguage: string
+): ContactLanguageInfo => {
+  return `This user speaks ${contactLanguage}.`;
 };
 ```
 
@@ -32,10 +32,8 @@ Quand une union est employée dans une section interpolée, le type résultant e
 type English = "english";
 type French = "french";
 
-type CurrentLanguageInfo = `You are browsing our site's ${
-  | French
-  | English} version`;
-// type CurrentLanguageInfo = "You are browsing our site's french version" | "You are browsing our site's french version"
+type ContactLanguageInfo = `This user speaks ${French | English}.`;
+// ^? type ContactLanguageInfo = "This user speaks french." | "This user speaks english"
 ```
 
 ## Inference

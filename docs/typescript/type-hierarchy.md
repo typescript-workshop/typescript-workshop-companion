@@ -22,4 +22,4 @@ En bas, on retrouve les constantes qui sont les versions ultra spécifiques des 
 Tout en bas, on a le type `never` qui est utilisé pour matérialiser un type impossible.
 Souvent utilisé dans la branche par défaut d'un switch sur lequel vous voulez être exhaustif, et dans les cas impossibles lors de transformations de types.
 
-![Hierarchie des types](img/ts_types_hierarchy.png)
+![Hiérarchie des types](img/ts_types_hierarchy.png)

@@ -19,6 +19,7 @@ sidebar_position: 12
 # Exercices
 
 - [Type-level TypeScript](https://type-level-typescript.com/)
+- [type-level-typescript-workshop](https://github.com/gvergnaud/type-level-typescript-workshop/tree/main/04-template-literal-types)
 - [Advent of TypeScript](https://www.adventofts.com/)
 
 # Articles et livre
@@ -26,4 +27,4 @@ sidebar_position: 12
 - [A different way to think about typescript](https://www.rob.directory/blog/a-different-way-to-think-about-typescript)
 - [The type hierarchy tree](https://www.zhenghao.io/posts/type-hierarchy-tree)
 - [Developing type-level algorithms in TypeScript](https://softwaremill.com/developing-type-level-algorithms-in-typescript/)
-- TypeScript - Notions fondamentales (2e édition), Felix Billon et Sylvain Pontoreau
+- [TypeScript - Notions fondamentales (2e édition), Felix Billon et Sylvain Pontoreau](https://www.editions-eni.fr/livre/typescript-notions-fondamentales-2e-edition-9782409041266)
