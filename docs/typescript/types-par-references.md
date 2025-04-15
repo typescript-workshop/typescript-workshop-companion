@@ -24,7 +24,7 @@ type MyTuple = [string, number, boolean];
 const myTuple: MyTuple = ["workshop", 12, true];
 
 const myWrongTuple: MyTuple = [12, "workshop", true];
-// ^? TS type string incompatible avec type number
+//          ^? TS type string incompatible avec type number
 ```
 
 ## Les objets

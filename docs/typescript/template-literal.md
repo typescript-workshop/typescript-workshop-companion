@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 11
 ---
 
 # Template Literals
@@ -26,7 +26,7 @@ const displayCurrentLanguageInfo = (
 };
 ```
 
-Quand une union est employée dans une section interpolée, le type résultant est l'ensemble des combinaisons découalnt de chaque membre de l'union :
+Quand une union est employée dans une section interpolée, le type résultant est l'ensemble des combinaisons découlant de chaque membre de l'union :
 
 ```ts
 type English = "english";
@@ -40,7 +40,7 @@ type CurrentLanguageInfo = `You are browsing our site's ${
 
 ## Inference
 
-Il est possible d'inférer un type à partir d'un gabarit par substitution.
+Il est possible d'inférer un type à partir d'un template par substitution.
 
 ```ts
 type FrenchSpeakingCountryCode<Locale> = Locale extends `fr_${infer Country}`
