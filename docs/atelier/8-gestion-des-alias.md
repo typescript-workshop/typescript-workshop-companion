@@ -83,24 +83,17 @@ export const selectFrom = <
 Alias sur les champs
 
 ```ts
-type AnyDB = Record<string, Record<string, any>>
+type AliasableField<T> = T | `${T & string} as ${string}`
 
-type AliasableField<DB extends AnyDB, TB extends keyof DB> =
-  | keyof DB[TB]
-  | `${keyof DB[TB] & string} as ${string}`;
+type FieldOrExplicitField<Table, Field> = AliasableField<Field> | `${Table & string}.${AliasableField<Field> & string}`
 
-export type ExplicitableField<
-  DB extends AnyDB,
-  TB extends keyof DB
-> = TB extends `${infer Table} ${infer Alias}`
-  ? AliasableField<DB, Table> | `${Alias}.${AliasableField<DB, Table> & string}`
-  : //                               ^? l'alias de la table
-    | AliasableField<DB, TB>
-    | `${TB & string}.${AliasableField<DB, TB> & string}`;
+type ExplicitableField<Ctx extends AnySelectableContext> = Ctx["_table"] extends `${infer Table} ${infer Alias}`
+    ? FieldOrExplicitField<Alias, keyof Ctx['$db'][Table]>
+    : FieldOrExplicitField<Ctx['_table'], keyof Ctx['$db'][Ctx['_table']]>
 
 export const selectFields = <Ctx extends AnySelectableContext>(
   ctx: Ctx,
-  fieldNames: ExplicitableField<Ctx["$db"], Ctx["_table"]>[]
+  fieldNames: ExplicitableField<Ctx>[]
 ) => ({
   ...ctx,
   _fields: fieldNames,
