@@ -21,9 +21,11 @@ Si l'on veut expliciter le fait qu'une variable n'a pas de valeur dans ce cas on
 
 :::
 
-Comment utiliser ces types ? Lorsque que vous souhaitez typer une variable const ou let, il vous suffit de préciser son type en suivant la syntaxe ci-dessous :
+Comment utiliser ces types ? Lorsque que vous souhaitez typer une variable const ou let, il vous suffit de préciser son type après les ":" en suivant la syntaxe ci-dessous :
 
 `const workshop : Mon Type = ...`
+ou
+`let workshop : Mon Type = ...`
 
 :::info L'inférence de type, quand le compilateur le déduit de lui-même.
 

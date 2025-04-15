@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## Les arrays et les tuples
 
-En TypeScript, les tableaux sont aussi appelés Arrays. Un array peut être contenir qu'un seul type, par exemple un tableau de string, number, etc.
+En TypeScript, les tableaux sont aussi appelés Arrays. Un array est par exemple un tableau de string, de number, de boolean, etc.
 
 :::tip Les deux syntaxes possibles pour écrire le type d'un tableau
 Premier cas : `const myArray : type[]`
@@ -17,7 +17,7 @@ La syntaxe `<type>` correspond à un type générique, nous vous invitons à par
 
 :::
 
-Si on souhaite stocker des types des différents dans un tableau, nous pouvons utiliser des tuples. Un tuple représente une collection de valeurs ordonnées. Par exemple :
+Si on souhaite stocker des types des différents dans un ordre précis et défini, nous pouvons utiliser des tuples. Un tuple représente une collection de valeurs ordonnées. Par exemple :
 
 ```ts
 type MyTuple = [string, number, boolean];

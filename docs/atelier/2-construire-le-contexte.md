@@ -11,7 +11,7 @@ Nous allons créer un contexte qui sera propagé aux différentes fonctions que 
 La plupart du temps TypeScript infère le type depuis notre code, mais dans cette partie, **nous allons forcer du typage**.
 Attacher le type de notre base de données au contexte nous permettra de pouvoir le propager et l'inspecter pour les fonctions futures
 
-Rendez-vous dans le fichier `2-context-builder.spec.dt.ts` et `db.ts` pour l'implémentation.
+Rendez-vous dans le fichier `2-context-builder.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

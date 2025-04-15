@@ -16,7 +16,7 @@ Il existe deux syntaxes possibles :
 ### les types spéciaux
 
 - `any` qui représente n'importe quel type et qui désactive toute aide que le compilateur pourrait vous apporter: autocomplétion et erreur. Autrement dit, vous indiquez au complateur de ne pas analyser votre variable.
-- `unknown` qui représente n'importe quel type et qui vous forcera à verifier son type avant de l'utiliser
+- `unknown` qui représente n'importe quel type et qui vous forcera à verifier son type avant de l'utiliser.
 - `never` qui est utilisé pour matérialiser un type impossible.
 - `void` peut recevoir que les valeur `null` ou `undefined`, principalement utilisé pour typer les retours de fonction.
 

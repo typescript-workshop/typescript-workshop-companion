@@ -10,7 +10,7 @@ Maintenant, nous vous proposons à partir du typage de notre database d'apprendr
 
 ![selectFrom autocomplete](img/selectFrom_autocomplete.png)
 
-Rendez-vous dans le fichier `3-selectionner-une-table.spec.dt.ts` et `db.ts` pour l'implémentation. 
+Rendez-vous dans le fichier `3-selectionner-une-table.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

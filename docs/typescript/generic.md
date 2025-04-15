@@ -109,7 +109,7 @@ const otherUser = merge({ name: "Jean-Foo-Bar" }, 42);
 //        ^? { name: 'Jean-Foo-Bar'}
 ```
 
-Heureusement, nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends`.
+Heureusement, nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends` (qui permet de définir des [types conditionnels](./conditional-types)).
 Ainsi le compilateur nous alertera si on tente de fournir un argument qui ne satisfait pas cette contrainte.
 
 ```ts
@@ -143,7 +143,9 @@ Nous pourrons ainsi définir des types spécialisés, ce qui nous permettra de l
 
 ```ts
 type UserId = UUID<"user">;
+//      ^? type UserId = string & { $uniqueOpaqueProperty: "user_uuid";}
 type CompanyId = UUID<"company">;
+//      ^? type CompanyId = string & { $uniqueOpaqueProperty: "company_uuid";}
 
 const linkUsers = (user1: UserId, user2: UserId) => {
   // on fait des traitements qui n'ont de sens qu'avec des identifiants d'utilisateurs
