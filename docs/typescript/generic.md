@@ -31,10 +31,12 @@ const identity = (arg: any):any => {
     return `${arg}`; // notre fonction renverra toujours une chaîne de caractères
 }
 
-identity(42); // --> '42'
-identity('42'); // --> '42'
-// et par ailleurs ...
-identity(true): // --> 'true'
+identity('42');
+// ^?  '42'
+identity(42);
+// ^? '42'
+identity(true):
+// ^? 'true'
 ```
 
 Mais on on voudrait bel et bien **garantir** qu'on obtiendra en sortie le même type qu'en entrée.
@@ -95,7 +97,7 @@ const merge = <U, V>(obj1: U, obj2: V) => ({
 });
 
 const user = merge({ name: "Jean-Foo-Bar" }, { age: 42 });
-console.log(user); // { name: 'Jean-Foo-Bar', age: 42}
+//      ^? { name: 'Jean-Foo-Bar', age: 42}
 
 // on note au passage que nous employons deux types génériques dans la signature de _merge_, obj1 et obj2 n'étant pas (nécessairement) du même type
 ```
@@ -104,7 +106,7 @@ Telle qu'elle a été définie la fonction merge vise à fusionner deux objets m
 
 ```ts
 const otherUser = merge({ name: "Jean-Foo-Bar" }, 42);
-console.log(otherUser); // { name: 'Jean-Foo-Bar'}
+//        ^? { name: 'Jean-Foo-Bar'}
 ```
 
 Heureusement, nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends`.
@@ -116,10 +118,8 @@ const merge = <U extends object, V extends object>(obj1: U, obj2: V) => ({
   ...obj2,
 });
 
-const otherUser = merge(
-  { name: "Jean-Foo-Bar" },
-  42 // Argument of type 'number' is not assignable to parameter of type 'object'.ts(2345)
-);
+const otherUser = merge({ name: "Jean-Foo-Bar" }, 42);
+//      ^? Argument of type 'number' is not assignable to parameter of type 'object'
 ```
 
 ## Génériques sous contrainte, un exemple d'utilisation
