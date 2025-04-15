@@ -8,9 +8,9 @@ Notre builder de requête SQL progresse, nous sommes maintenant capables de sél
 
 Au quotidien, vous avez surement l'habitude d'écrire des requêtes sur un modèle similaire à celui-ci `select * from users`. Dans ce cas le symbole '\*' indique que vous souhaitez récupérer l'ensemble des champs de la table.
 
-Dans le cadre de cet atelier le symbol '\*' va être remplacer pour le mot 'ALL' pour simplifier l'exercice.
+Dans le cadre de cet atelier le symbole '\*' va être remplacé pour le mot 'ALL' pour simplifier l'exercice.
 
-Super, maintenant que TypeScript a de moins en moins de secrets pour vous, nous vous proposons de vous plonger dans ce 5ème exercice afin de faire évoluer le typage afin de pouvoir sélectionner l'ensemble des champs d'une table. Pour cela rendez-vous dans le fichier `5-selectionner-tous-les-champs.ts` et `db.ts` pour l'implémentation.
+Super, maintenant que TypeScript a de moins en moins de secrets pour vous, nous vous proposons de vous plonger dans ce 5ᵉ exercice afin de faire évoluer le typage dans le but de pouvoir sélectionner l'ensemble des champs d'une table. Pour cela rendez-vous dans le fichier `5-selectionner-tous-les-champs.ts` et `db.ts` pour l'implémentation.
 
 À vous de jouer !
 

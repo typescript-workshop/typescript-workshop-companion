@@ -30,9 +30,9 @@ Rendez-vous dans le fichier `8-gestion-des-alias.ts` et `db.ts` pour l'implémen
 <details>
   <summary>Déclarer un alias sur une table</summary>
   
-  Comment déclarer un alias (ou pas !) ? En effet la subtilité ici est que dans la déclaration de seléction d'une table on pourra avoir soit `le_nom_de_la_table` ou bien `le_nom_de_la_table son_alias`.
+  Comment déclarer un alias (ou pas !) ? En effet, la subtilité ici est que dans la déclaration de sélection d'une table, on pourra avoir soit `le_nom_de_la_table` ou bien `le_nom_de_la_table son_alias`.
 
-  Avant de savoir comment nous utiliserons cet alias ensuite nous pouvons déjà tenter d'expliquer à Typescript que les deux formes peuvent être employées.
+  Avant de savoir comment nous utiliserons cet alias ensuite, nous pouvons déjà tenter d'expliquer à TypeScript que les deux formes peuvent être employées.
   
 </details>
 
@@ -41,7 +41,7 @@ Rendez-vous dans le fichier `8-gestion-des-alias.ts` et `db.ts` pour l'implémen
 <details>
   <summary>Déclarer un alias sur champ</summary>
   
-  C'est un peu le même cas que pour une table, il faut seulement prendre en compte la syntaxe ` as ` (qui sépare le nom du champs et son alias) en compte.
+  C'est un peu le même cas que pour une table, il faut seulement prendre en compte la syntaxe ` as ` (qui sépare le nom du champ et son alias) en compte.
   
 </details>
 
@@ -50,7 +50,7 @@ Rendez-vous dans le fichier `8-gestion-des-alias.ts` et `db.ts` pour l'implémen
 <details>
   <summary>Utiliser ces alias</summary>
   
-  Pour savoir si une syntaxe est acceptable il va par exemple falloir déterminer si une table est aliasée ou non. Dans ce cas on peut se demander si son invocation `extends` une structure du type `le_nom_de_la_table son_alias` ou non !   
+  Pour savoir si une syntaxe est acceptable, il va par exemple falloir déterminer si une table est aliasée ou non. Dans ce cas, on peut se demander si son invocation `extends` une structure du type `le_nom_de_la_table son_alias` ou non !   
 </details>
 
 ## Solution
