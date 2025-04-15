@@ -13,7 +13,7 @@ Remédions à cela en créant notre `deleteFrom`. Rendez-vous dans le fichier `7
 :::tip Ressources
 
 - [Types génériques](../typescript/generic.md)
-- [KeyOf & lookup](../typescript/keyof-lookup.md)
+- [Keyof & lookup](../typescript/keyof-lookup.md)
 - [Hiérarchie des types](../typescript/type-hierarchy.md)
 - [Types conditionnels](../typescript/conditional-types.md)
 

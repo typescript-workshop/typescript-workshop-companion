@@ -17,7 +17,7 @@ Rendez-vous dans le fichier `6-filtrer-des-lignes.ts` et `db.ts` pour l'impléme
 
 :::tip Ressources
 
-- [KeyOf & lookup](../typescript/keyof-lookup.md)
+- [Keyof & lookup](../typescript/keyof-lookup.md)
 - [Types conditionnels](../typescript/conditional-types.md)
 
 :::
@@ -55,29 +55,28 @@ Au final, on va utiliser ici beaucoup de choses qu'on a déjà pu aborder : _loo
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
 ```ts
+type FilterableContext<DB> = SelectableContext<DB> & {
+  _fields: (keyof DB[keyof DB])[] | "ALL";
+};
 
-  type FilterableContext<DB> = SelectableContext<DB> & {
-    _fields: (keyof DB[keyof DB])[] | "ALL";
-  };
+type AnyFilterableContext = FilterableContext<any>;
 
-  type AnyFilterableContext = FilterableContext<any>;
-
-  export const where = <
-    Ctx extends AnySelectableContext,
-    Field extends keyof Ctx["$db"][Ctx["_table"]]
-  >(
-    ctx: Ctx,
-    field: Field,
-    operator: "=",
-    value: Ctx["$db"][Ctx["_table"]][Field]
-  ) => ({
-    ...ctx,
-    _where: {
-      field,
-      operator,
-      value,
-    },
-  });
-  ```
+export const where = <
+  Ctx extends AnySelectableContext,
+  Field extends keyof Ctx["$db"][Ctx["_table"]]
+>(
+  ctx: Ctx,
+  field: Field,
+  operator: "=",
+  value: Ctx["$db"][Ctx["_table"]][Field]
+) => ({
+  ...ctx,
+  _where: {
+    field,
+    operator,
+    value,
+  },
+});
+```
 
 </details>

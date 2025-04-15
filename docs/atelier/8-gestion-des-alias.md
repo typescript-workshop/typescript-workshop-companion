@@ -6,7 +6,7 @@ sidebar_position: 8
 
 Wow ! On peut maintenant supprimer des enregistrements de notre base de données 🎉.
 
-Même si nous pas encore d'implémentations pour les formules ou les jointures, il pourrait être chouette d'avoir la possibilité de créer des alias, non ?
+Même si nous n'avons pas encore d'implémentations pour les formules ou les jointures, il pourrait être chouette d'avoir la possibilité de créer des alias, non ?
 
 Ne serait-ce que pour bien garder en tête qu'on est en train de manipuler des `codes_pays` quand bien même `c_iso_3166` signifie la même chose !
 
@@ -19,7 +19,7 @@ Rendez-vous dans le fichier `8-gestion-des-alias.ts` et `db.ts` pour l'implémen
 :::tip Ressources
 
 - [Types génériques](../typescript/generic.md)
-- [KeyOf & lookup](../typescript/keyof-lookup.md)
+- [Keyof & lookup](../typescript/keyof-lookup.md)
 - [Hiérarchie des types](../typescript/type-hierarchy.md)
 - [Types conditionnels](../typescript/conditional-types.md)
 
@@ -32,8 +32,8 @@ Rendez-vous dans le fichier `8-gestion-des-alias.ts` et `db.ts` pour l'implémen
   
   Comment déclarer un alias (ou pas !) ? En effet, la subtilité ici est que dans la déclaration de sélection d'une table, on pourra avoir soit `le_nom_de_la_table` ou bien `le_nom_de_la_table son_alias`.
 
-  Avant de savoir comment nous utiliserons cet alias ensuite, nous pouvons déjà tenter d'expliquer à TypeScript que les deux formes peuvent être employées.
-  
+Avant de savoir comment nous utiliserons cet alias ensuite, nous pouvons déjà tenter d'expliquer à TypeScript que les deux formes peuvent être employées.
+
 </details>
 
 ## Indice 2
@@ -83,13 +83,16 @@ export const selectFrom = <
 Alias sur les champs
 
 ```ts
-type AliasableField<T> = T | `${T & string} as ${string}`
+type AliasableField<T> = T | `${T & string} as ${string}`;
 
-type FieldOrExplicitField<Table, Field> = AliasableField<Field> | `${Table & string}.${AliasableField<Field> & string}`
+type FieldOrExplicitField<Table, Field> =
+  | AliasableField<Field>
+  | `${Table & string}.${AliasableField<Field> & string}`;
 
-type ExplicitableField<Ctx extends AnySelectableContext> = Ctx["_table"] extends `${infer Table} ${infer Alias}`
-    ? FieldOrExplicitField<Alias, keyof Ctx['$db'][Table]>
-    : FieldOrExplicitField<Ctx['_table'], keyof Ctx['$db'][Ctx['_table']]>
+type ExplicitableField<Ctx extends AnySelectableContext> =
+  Ctx["_table"] extends `${infer Table} ${infer Alias}`
+    ? FieldOrExplicitField<Alias, keyof Ctx["$db"][Table]>
+    : FieldOrExplicitField<Ctx["_table"], keyof Ctx["$db"][Ctx["_table"]]>;
 
 export const selectFields = <Ctx extends AnySelectableContext>(
   ctx: Ctx,
