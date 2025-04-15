@@ -6,7 +6,6 @@ sidebar_position: 100
 
 # Outils
 
-- [Testing types with vitest](https://vitest.dev/guide/testing-types.html#testing-types)
 - [TS Reset](https://www.totaltypescript.com/ts-reset)
 - [TS-essentials](https://github.com/ts-essentials/ts-essentials)
 - [TS-Pattern](https://github.com/gvergnaud/ts-pattern)
@@ -28,4 +27,3 @@ sidebar_position: 100
 - [The type hierarchy tree](https://www.zhenghao.io/posts/type-hierarchy-tree)
 - [Developing type-level algorithms in TypeScript](https://softwaremill.com/developing-type-level-algorithms-in-typescript/)
 - TypeScript - Notions fondamentales (2e édition), Felix Billon et Sylvain Pontoreau
-
