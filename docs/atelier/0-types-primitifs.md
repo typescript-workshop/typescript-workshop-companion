@@ -6,7 +6,7 @@ sidebar_position: 0
 
 Ce premier exercice a pour objectif de balayer les concepts de bases de TypeScript et les différentes syntaxes qui existent. Nous commencerons à construire notre builder de requêtes SQL seulement dans l'exercice 1.
 
-Pour cette première partie, nous allons balayer avec une série de tests, les types primitifs, les arrays, les tuples et les objets ainsi que les opérateurs keyof, lookup type et typeof.
+Pour cette première partie, nous allons balayer avec une série de tests, les types primitifs, les arrays, les tuples et les objets ainsi que les opérateurs keyof, lookup type et typeof ainsi que les types littéraux.
 
 Par la suite, nous allons réutiliser ces concepts tout au long de l'atelier, n'hésitez pas à nous appeler si vous souhaitez plus d'explications ou que l'on éclaircisse un point avec vous.
 
