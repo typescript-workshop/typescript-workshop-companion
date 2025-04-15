@@ -33,7 +33,7 @@ type English = "english";
 type French = "french";
 
 type ContactLanguageInfo = `This user speaks ${French | English}.`;
-// ^? type ContactLanguageInfo = "This user speaks french." | "This user speaks english"
+//          ^? type ContactLanguageInfo = "This user speaks french." | "This user speaks english."
 ```
 
 ## Inference
@@ -45,7 +45,10 @@ type FrenchSpeakingCountryCode<Locale> = Locale extends `fr_${infer Country}`
   ? Country
   : never;
 
-type FranceCountryCode = FrenchSpeakingCountryCode<"fr_FR">; // "FR"
-type CanadaCountryCode = FrenchSpeakingCountryCode<"fr_CA">; // "CA"
-type BelgiumCountryCode = FrenchSpeakingCountryCode<"fr_BE">; // "BE"
+type FranceCountryCode = FrenchSpeakingCountryCode<"fr_FR">;
+//        ^? type FranceCountryCode = "FR"
+type CanadaCountryCode = FrenchSpeakingCountryCode<"fr_CA">;
+//        ^? type CanadaCountryCode = "CA"
+type BelgiumCountryCode = FrenchSpeakingCountryCode<"fr_BE">;
+//        ^? type BelgiumCountryCode = "BE"
 ```
