@@ -1,12 +1,14 @@
 ---
-sidebar_position: 8
+sidebar_position: 7
 ---
 
-# Keyof
+# Keyof et lookup type
+
+## Keyof
 
 L'opérateur `keyof` permet d'accéder aux clés des propriétés d'un objet.
 
-## Utilisation courante
+### Utilisation courante
 
 La plupart du temps vous voudrez l'utiliser lors de la transformation d'un type avec un mapped type ou pour appliquer des contraintes sur un type generique.
 
@@ -14,7 +16,8 @@ Grace à cette opérateur vous pourrez recuperer les clés d'un objet
 
 ```ts
 type Workshop = { name: string; schedule: number };
-type WorkshopKeys = keyof Workshop; // "name" | "schedule"
+type WorkshopKeys = keyof Workshop;
+//       ^? type WorkshopKeys =  "name" | "schedule"
 ```
 
 Autre exemple :
@@ -44,7 +47,7 @@ type Result3 = Foo["0"];
 //    ^? type Result3 = "bar"
 ```
 
-## Bon à savoir
+### Bon à savoir
 
 `keyof` peut etre utilisé sur n'importe quel type
 
@@ -56,7 +59,7 @@ type Result = Foo["indexOf"];
 //    ^? type Result = (searchString: string, position?: number) => number
 ```
 
-### Sur des clés typées
+#### Sur des clés typées
 
 Depuis un `Record`, si la signature des index est de type `string` ou `number` keyof retournera ces types
 
@@ -69,15 +72,17 @@ Attention, en Javascript les clés des objets sont toujours forcée en chaînes 
 
 ```ts
 type StringIndexed = { [n: string]: unknown };
-type StringIndexedKeys = keyof StringIndexed; // string | number
+type StringIndexedKeys = keyof StringIndexed;
+//        ^? type StringIndexedKeys = string | number
 ```
 
-# Lookup type
+## Lookup type
 
 La syntaxe est `T[Y]`, où `Y` est une clé de `T` permet d'accéder au type des propriétés d'un objet.
 Par exemple :
 
 ```ts
 type Workshop = { name: string; schedule: number };
-type WorkshopName = Workshop["name"]; // string
+type WorkshopName = Workshop["name"];
+//        ^? type WorkshopName = string
 ```
