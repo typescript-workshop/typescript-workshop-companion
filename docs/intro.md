@@ -38,10 +38,6 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 
 Une fois le repository cloné, n'oubliez pas de lancer la commande `npm install` ou `yarn install`
 
-Pour lancer les tests vous pouvez utiliser la commande `npm run test` ou `yarn run test`
-
-L'extension .spec-d permet d'indiquer qu'il s'agit de fichiers de test où l'on test le typage.
-
 :::
 
 ## Conseils avant de commencer
