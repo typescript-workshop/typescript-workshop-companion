@@ -13,7 +13,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Johan Rouve",
     pictureUrl: "https://iili.io/5LEXeV.jpg",
-    description: <>Développeur full-stack freelance</>,
+    description: <>CTO chez TrustCollect</>,
   },
   {
     title: "Marjorie Aubert",
