@@ -83,6 +83,7 @@ On peut _caster_ `undefined` directement vers le type de notre base de données 
       */
       $db: DB
     }
+  
 
     export const buildContext = <DB>() => {
       return {} as EmptyContext<DB>;

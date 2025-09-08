@@ -63,7 +63,44 @@ export default function HomepageFeatures(): ReactNode {
           </div>
         </div>
       </section>
+    
       <section className={clsx("padding--xl", styles.comet)}>
+        <div className="container text--center">
+          <img
+            src="img/trustcollect.svg"
+            alt="TrustCollect logo"
+            className={styles.logo}
+          />
+          <h1 className={clsx("margin-vert--lg", styles.textBlack)}>
+            Collectez des témoignages clients qui convertissent
+          </h1>
+          <div className="row margin-vert--lg">
+            <div className="col">
+             <img
+                src="https://www-staging.trustcollect.io/_astro/home-video.DsgZurW6.png"
+                alt="Comet La défense"
+                className={styles.cometImage}
+              />
+            </div>
+            <div className="col">
+             <img
+                src="https://www-staging.trustcollect.io/_astro/home-dashboard.CjLdIgtq.png"
+                alt="Comet La défense"
+                className={styles.cometImage}
+              />
+            </div>
+            <div className="col">
+             <img
+                src="https://www-staging.trustcollect.io/_astro/home-wall.BJOiNfQg.png"
+                alt="Comet La défense"
+                className={styles.cometImage}
+              />
+            </div>
+            
+          </div>
+        </div>
+      </section>
+        <section className={clsx("padding--l", styles.comet)}>
         <div className="container text--center">
           <img
             src="https://cdn.prod.website-files.com/642eed47b21be33868253a0c/642eee3534abb5bc1e1552ba_logo_yellow.svg"

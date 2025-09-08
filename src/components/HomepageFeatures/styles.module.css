@@ -20,6 +20,11 @@
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 900px) {
+  .comet {
+    min-height: auto;
+  }
+}
 
 .cometCraft div:first-child {
   font-size: 1.5rem;
