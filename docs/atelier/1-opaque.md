@@ -81,11 +81,3 @@ Essayer d'imaginer l'implémentation si `UUID` et `Opaque` étaient des fonction
     ```
 
 </details>
-
-
-Pour garantir l'unicité d'un type Opaque, vous pouvez déclarer une intersection entre votre type et un `Symbol` 
-
-Par exemple si vous copiez-coller ce code 
-``
-
-``
