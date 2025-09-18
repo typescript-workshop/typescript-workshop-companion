@@ -63,7 +63,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
         </div>
       </section>
-    
+
       <section className={clsx("padding--xl", styles.comet)}>
         <div className="container text--center">
           <img
@@ -76,31 +76,30 @@ export default function HomepageFeatures(): ReactNode {
           </h1>
           <div className="row margin-vert--lg">
             <div className="col">
-             <img
-                src="https://www-staging.trustcollect.io/_astro/home-video.DsgZurW6.png"
-                alt="Comet La défense"
+              <img
+                src="https://iili.io/K5vfr4p.md.png"
+                alt="La force du témoignage vidéo"
                 className={styles.cometImage}
               />
             </div>
             <div className="col">
-             <img
-                src="https://www-staging.trustcollect.io/_astro/home-dashboard.CjLdIgtq.png"
-                alt="Comet La défense"
+              <img
+                src="https://iili.io/K5vfj3B.md.png"
+                alt="Un dashboard simple pour gérer tous vos témoignages"
                 className={styles.cometImage}
               />
             </div>
             <div className="col">
-             <img
-                src="https://www-staging.trustcollect.io/_astro/home-wall.BJOiNfQg.png"
-                alt="Comet La défense"
+              <img
+                src="https://iili.io/K5vfvja.md.png"
+                alt="Wall of Trust"
                 className={styles.cometImage}
               />
             </div>
-            
           </div>
         </div>
       </section>
-        <section className={clsx("padding--l", styles.comet)}>
+      <section className={clsx("padding--l", styles.comet)}>
         <div className="container text--center">
           <img
             src="https://cdn.prod.website-files.com/642eed47b21be33868253a0c/642eee3534abb5bc1e1552ba_logo_yellow.svg"
