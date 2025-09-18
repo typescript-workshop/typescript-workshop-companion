@@ -10,6 +10,7 @@
 
 # Misc
 .DS_Store
+.history
 .idea
 .env.local
 .env.development.local

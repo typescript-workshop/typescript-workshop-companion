@@ -109,7 +109,7 @@ const otherUser = merge({ name: "Jean-Foo-Bar" }, 42);
 //        ^? { name: 'Jean-Foo-Bar'}
 ```
 
-Heureusement, nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends` (qui permet de définir des [types conditionnels](./conditional-types)).
+Heureusement, nous pouvons spécifier que les types des arguments, bien que génériques doivent satisfaire la contrainte d'être d'un certain type, ici des _objets_, grâce au mot-clé `extends` (qui permet de définir des [types conditionnels](./conditional-types.md)).
 Ainsi le compilateur nous alertera si on tente de fournir un argument qui ne satisfait pas cette contrainte.
 
 ```ts
