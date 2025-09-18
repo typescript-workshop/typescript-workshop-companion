@@ -64,7 +64,7 @@ export default function HomepageFeatures(): ReactNode {
         </div>
       </section>
 
-      <section className={clsx("padding--xl", styles.comet)}>
+      <section className={clsx(styles.comet)}>
         <div className="container text--center">
           <img
             src="img/trustcollect.svg"
@@ -99,7 +99,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
         </div>
       </section>
-      <section className={clsx("padding--l", styles.comet)}>
+      <section className={clsx(styles.comet)}>
         <div className="container text--center">
           <img
             src="https://cdn.prod.website-files.com/642eed47b21be33868253a0c/642eee3534abb5bc1e1552ba_logo_yellow.svg"
