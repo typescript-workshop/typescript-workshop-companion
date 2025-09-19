@@ -77,6 +77,13 @@ export default function HomepageFeatures(): ReactNode {
           <div className="row margin-vert--lg">
             <div className="col">
               <img
+                src="https://iili.io/K7lA83N.md.png"
+                alt="Une landing page de collecte dédiée à votre produit"
+                className={styles.cometImage}
+              />
+            </div>
+            <div className="col">
+              <img
                 src="https://iili.io/K5vfr4p.md.png"
                 alt="La force du témoignage vidéo"
                 className={styles.cometImage}
@@ -86,13 +93,6 @@ export default function HomepageFeatures(): ReactNode {
               <img
                 src="https://iili.io/K5vfj3B.md.png"
                 alt="Un dashboard simple pour gérer tous vos témoignages"
-                className={styles.cometImage}
-              />
-            </div>
-            <div className="col">
-              <img
-                src="https://iili.io/K5vfvja.md.png"
-                alt="Wall of Trust"
                 className={styles.cometImage}
               />
             </div>
