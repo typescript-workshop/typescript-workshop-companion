@@ -62,8 +62,7 @@ type FilterableContext<DB> = SelectableContext<DB> & {
 type AnyFilterableContext = FilterableContext<any>;
 
 export const where = <
-  Ctx extends type AnyFilterableContext = FilterableContext<any>;
-,
+  Ctx extends AnyFilterableContext,
   Field extends keyof Ctx["$db"][Ctx["_table"]]
 >(
   ctx: Ctx,
