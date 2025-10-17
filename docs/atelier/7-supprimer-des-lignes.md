@@ -43,11 +43,6 @@ On avait typé la fonction `where` pour qu'elle opère à partir d'un _contexte_
   <summary>Avant de déplier pour afficher la solution, n'hésitez pas à nous solliciter ! </summary>
 
     ```ts
-    type DeletableContext<DB> = EmptyContext<DB> & {
-      _operation: "delete";
-      _table: keyof DB;
-    };
-
     export const deleteFrom = <
       Ctx extends AnyEmptyContext,
       TB extends keyof Ctx["$db"]
@@ -64,6 +59,11 @@ On avait typé la fonction `where` pour qu'elle opère à partir d'un _contexte_
     Il faudra aussi modifier la signature de `where` pour qu'elle accepte également un `DeletableContext`.
 
     ```ts
+    type DeletableContext<DB> = EmptyContext<DB> & {
+      _operation: "delete";
+      _table: keyof DB;
+    };
+
     type AnyQueryableContext = SelectableContext<any> | DeletableContext<any>;
 
     export const where = <
