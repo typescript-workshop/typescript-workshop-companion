@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
 import clsx from "clsx";
-import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
   pictureUrl: string;
+  logoUrl: ReactNode;
   description: ReactNode;
 };
 
@@ -13,21 +13,38 @@ const FeatureList: FeatureItem[] = [
   {
     title: "Johan Rouve",
     pictureUrl: "https://iili.io/5LEXeV.jpg",
+    logoUrl: (
+      <img
+        src="img/trustcollect.svg"
+        alt="TrustCollect logo"
+        className={styles.logo_trustcollect}
+      />
+    ),
     description: <>CTO chez TrustCollect</>,
   },
   {
-    title: "Marjorie Aubert",
-    pictureUrl: "https://iili.io/3FFyGpa.md.jpg",
-    description: <>Développeuse full-stack chez Comet Meetings</>,
+    title: "Jordane Grenat",
+    pictureUrl: "https://iili.io/Kt17tYF.jpg",
+    logoUrl: (
+      <img src="img/najar.svg" alt="Najar logo" className={styles.logo_najar} />
+    ),
+    description: <>Développeur full-stack chez Najar</>,
   },
   {
     title: "Bastien Tran",
     pictureUrl: "https://iili.io/3FKFlou.jpg",
+    logoUrl: (
+      <img
+        src="https://cdn.prod.website-files.com/642eed47b21be33868253a0c/642eee3534abb5bc1e1552ba_logo_yellow.svg"
+        alt="Comet logo"
+        className={styles.logo_comet}
+      />
+    ),
     description: <>Développeur full-stack chez Comet Meetings</>,
   },
 ];
 
-function Feature({ title, pictureUrl, description }: FeatureItem) {
+function Feature({ title, pictureUrl, description, logoUrl }: FeatureItem) {
   return (
     <div className={clsx("col avatar avatar--vertical")}>
       <img
@@ -46,6 +63,7 @@ function Feature({ title, pictureUrl, description }: FeatureItem) {
         <div className="avatar__name">{title}</div>
         <p className="avatar__subtitle">{description}</p>
       </div>
+      {logoUrl}
     </div>
   );
 }
@@ -56,81 +74,10 @@ export default function HomepageFeatures(): ReactNode {
       <section className={styles.features}>
         <div className="container">
           <h3 className="text--center">Animé par</h3>
-          <div className="row">
+          <div className={clsx("row", styles.features_row_container)}>
             {FeatureList.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={clsx(styles.comet)}>
-        <div className="container text--center">
-          <img
-            src="img/trustcollect.svg"
-            alt="TrustCollect logo"
-            className={styles.logo}
-          />
-          <h1 className={clsx("margin-vert--lg", styles.textBlack)}>
-            Collectez des témoignages clients qui convertissent
-          </h1>
-          <div className="row margin-vert--lg">
-            <div className="col">
-              <img
-                src="https://iili.io/K7lA83N.md.png"
-                alt="Une landing page de collecte dédiée à votre produit"
-                className={styles.cometImage}
-              />
-            </div>
-            <div className="col">
-              <img
-                src="https://iili.io/K5vfr4p.md.png"
-                alt="La force du témoignage vidéo"
-                className={styles.cometImage}
-              />
-            </div>
-            <div className="col">
-              <img
-                src="https://iili.io/K5vfj3B.md.png"
-                alt="Un dashboard simple pour gérer tous vos témoignages"
-                className={styles.cometImage}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className={clsx(styles.comet)}>
-        <div className="container text--center">
-          <img
-            src="https://cdn.prod.website-files.com/642eed47b21be33868253a0c/642eee3534abb5bc1e1552ba_logo_yellow.svg"
-            alt="Comet logo"
-            className={styles.logo}
-          />
-          <h1 className={clsx("margin-vert--lg", styles.textBlack)}>
-            Des lieux dédiés à la réussite de vos évènements.
-          </h1>
-          <div className="row margin-vert--lg">
-            <div className="col">
-              <img
-                src="https://res.cloudinary.com/ddyhxyc8l/image/upload/w_1600,h_1067,c_fill,g_auto/v1658133621/booking/coeur-defense/cover.jpg"
-                alt="Comet La défense"
-                className={styles.cometImage}
-              />
-            </div>
-            <div className="col">
-              <img
-                src="https://res.cloudinary.com/ddyhxyc8l/image/upload/w_1600,h_1067,c_fill,g_auto/v1658133621/booking/comet-louise/1.jpg"
-                alt="Comet Louise"
-                className={styles.cometImage}
-              />
-            </div>
-            <div className="col">
-              <img
-                src="https://res.cloudinary.com/ddyhxyc8l/image/upload/w_1600,h_1067,c_fill,g_auto/v1658133621/booking/comet-retiro/cover.jpg"
-                alt="Comet Retiro"
-                className={styles.cometImage}
-              />
-            </div>
           </div>
         </div>
       </section>
