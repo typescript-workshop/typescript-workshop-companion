@@ -6,7 +6,7 @@ sidebar_position: 3
 
 TypeScript comprend plusieurs types primitifs :
 
-- string, ex : 'Bdx I/O'
+- string, ex : 'Touraine Tech'
 - number, ex : 18
 - boolean, true/false
 - null

@@ -23,12 +23,12 @@ const FeatureList: FeatureItem[] = [
     description: <>CTO chez TrustCollect</>,
   },
   {
-    title: "Jordane Grenat",
+    title: "Marjorie Aubert",
     pictureUrl: "https://iili.io/Kt17tYF.jpg",
     logoUrl: (
-      <img src="img/najar.svg" alt="Najar logo" className={styles.logo_najar} />
+      <img src="img/najar.svg" alt="Najar logo" className={styles.logo_comet} />
     ),
-    description: <>Développeur full-stack chez Najar</>,
+    description: <>Développeuse full-stack chez Comet Meetings</>,
   },
   {
     title: "Bastien Tran",
@@ -51,13 +51,13 @@ function Feature({ title, pictureUrl, description, logoUrl }: FeatureItem) {
         src={pictureUrl}
         className={clsx(
           "avatar__photo avatar__photo--xl",
-          styles.avatar__photo
+          styles.avatar__photo,
         )}
       />
       <div
         className={clsx(
           "text--center margin-top--md padding-horiz--md avatar__intro",
-          styles.avatar__intro
+          styles.avatar__intro,
         )}
       >
         <div className="avatar__name">{title}</div>
