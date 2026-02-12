@@ -137,7 +137,7 @@ type Opaque<A, B extends string> = A & {
 ```
 
 Un type _opaques_ adjoint une sorte d'_étiquette_ à un type générique, ici "A" (qui peut donc être une instance de n'importe quel type).
-"B" est également un type générique, avec la contrainte supplémentaire d'être une chaîne de caractères, ce qui nous permettra de construite l'_étiquette_ que nous venons d'évoquer.
+"B" est également un type générique, avec la contrainte supplémentaire d'être une chaîne de caractères, ce qui nous permettra de construire l'_étiquette_ que nous venons d'évoquer.
 
 Nous pourrons ainsi définir des types spécialisés, ce qui nous permettra de limiter les risques de faire des choses insensées comme passer l'identifiant d'une entreprise à une fonction qui n'est censée traiter que des identifiants d'utilisateurs.
 
