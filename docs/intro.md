@@ -32,7 +32,7 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 
 ## Rejoindre TypeScript Workshop Companion
 
-[](https://typescript-workshop.github.io/typescript-workshop-companion/)
+[https://urls.fr/S5_Ol2](https://typescript-workshop.github.io/typescript-workshop-companion/)
 
 :::info Setup
 

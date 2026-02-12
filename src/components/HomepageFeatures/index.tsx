@@ -24,9 +24,13 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Marjorie Aubert",
-    pictureUrl: "https://iili.io/Kt17tYF.jpg",
+    pictureUrl: "https://iili.io/3FFyGpa.md.jpg",
     logoUrl: (
-      <img src="img/najar.svg" alt="Najar logo" className={styles.logo_comet} />
+      <img
+        src="https://cdn.prod.website-files.com/642eed47b21be33868253a0c/642eee3534abb5bc1e1552ba_logo_yellow.svg"
+        alt="Comet logo"
+        className={styles.logo_comet}
+      />
     ),
     description: <>Développeuse full-stack chez Comet Meetings</>,
   },
