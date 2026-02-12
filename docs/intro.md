@@ -32,7 +32,7 @@ jamais démuni à la lecture d’une page de définition TypeScript.
 
 ## Rejoindre TypeScript Workshop Companion
 
-<p class="font--industrial">[https://urls.fr/S5_Ol2](https://typescript-workshop.github.io/typescript-workshop-companion/)</p>
+<p className="font--industrial" style={{fontSize: "1.4rem"}}>[https://urls.fr/S5_Ol2](https://typescript-workshop.github.io/typescript-workshop-companion/)</p>
 
 :::info Setup
 
